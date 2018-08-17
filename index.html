@@ -1,0 +1,2711 @@
+    
+<!Doctype html>
+<html lang="en" class="gr__tokenjar_io">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="assets/img/kk.png" type="image/x-icon">
+  <title>ExToke FEE FREE DEX!!!</title>
+<meta name="description" content="ExToke Decentralized Exchange Platform. NO FEES!!!" />
+<meta property="og:url" content="https://www.extoke.com/" />
+<meta property="og:title" content="ExToke FEE FREE DEX!!!" />
+<meta property="og:description" content="ExToke Decentralized Exchange Platform. NO FEES!!!" />
+<meta property="og:image" content="https://www.extoke.com/about/ppp.png" />
+  <link href="//fonts.googleapis.com/css?family=Open+Sans:300,400,600|Roboto+Condensed|Roboto:700" rel="stylesheet">
+  <style type="text/css">
+    .splash_screen { position: absolute; top: 0; bottom: 0; right: 0; left: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; }
+	.splash_screen__text { padding: 20px; font-family: Roboto Condensed, sans-serif; font-size: 15px; text-align: center}
+  .theme-dark .tabs__list_item-active {
+    background-color: #282828;
+}
+::-webkit-scrollbar {
+    width: 6px;
+}
+/* Track */
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey; 
+    border-radius: 6px;
+}
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #ddd; 
+    border-radius: 10px;
+}
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    /*background: #b30000; */
+}
+.nav-tabs>li>a{
+    text-align:center;
+}
+iframe{
+    height: 326px!important;
+    border-radius: 4px!important;
+}
+/*alertify css*/
+.alertify .ajs-dialog{
+    color: #fff;
+    background: #1E2B34!important;
+    border-top: 2px solid #18252E;
+}
+.alertify .ajs-header {
+    color: #fff!important;
+    border-bottom: 1px solid #18252E!important;
+}
+.alertify .ajs-header {
+    background-color: #1e2b34!important;
+}
+.alertify .ajs-footer {
+    background-color: #1e2b34!important;
+    border-top: 1px solid #18252E!important;
+}
+.alertify .ajs-body {
+    color: #ced2d5!important;
+}
+button.ajs-button.ajs-ok {
+    color: #000!important;
+    background: #3d84d6!important;
+    border-color: #3d84d6!important;
+}
+button.ajs-button.ajs-cancel{
+    color: #000!important;
+    background: #f66864!important;
+    border-color: #f66864!important;
+}
+.alertify .ajs-body {
+    font-family: unset!important;
+    color: #000;
+}
+.select-acc .glyphicon-user{
+    display: none;
+}
+.table>tbody>tr>td, .table>tbody>tr>th, .table>tfoot>tr>td, .table>tfoot>tr>th, .table>thead>tr>td, .table>thead>tr>th{
+   text-align: center!important;
+   width: 100px!important;
+}
+@media(max-width: 1024px){
+    .select-acc{
+        display:none;
+    }
+    .for-tablet-view{
+        display:none;
+    }
+}
+@media(max-width: 768px) {
+    .select-acc{
+        display:none;
+    }
+    .for-desktop-view{
+        display:none;
+    }
+    #myDIV1{
+        position: fixed;
+        top: 70px;
+        /*left: 60px;*/
+        right: 5px;
+        z-index:999;
+    }
+    .select-acc{
+        display: none;
+    }
+    .glyphicon-user{
+        display: block!important;
+    }
+    .margin-right-100{
+        margin-left: 100px;
+    }
+}
+@media(max-width: 480px) {
+   #ui-id-4{
+        padding: 5px 42px!important;   
+    }
+    #ui-id-3{
+        padding: 5px 44px!important;
+    }
+}
+@media(max-width: 425px) {
+   #ui-id-4{
+        padding: 5px 42px!important;   
+    }
+    #ui-id-3{
+        padding: 5px 44px!important;
+    }
+}
+@media(max-width: 375px) {
+    #ui-id-4{
+        padding: 5px 42px!important;   
+    }
+    #ui-id-3{
+        padding: 5px 44px!important;
+    }
+}
+@media(max-width: 320px) {
+    #ui-id-4{
+        padding: 5px 42px!important;   
+    }
+    #ui-id-3{
+        padding: 5px 44px!important;
+    }
+}
+.table>tbody>tr>td, .table>tbody>tr>th, .table>tfoot>tr>td, .table>tfoot>tr>th, .table>thead>tr>td, .table>thead>tr>th {
+    text-align: center;
+}
+</style>
+<link href="assets/css/style.css" rel="stylesheet">
+<link href="assets/css/custom.css" rel="stylesheet">
+<link href="assets/css/jquery-ui.css" rel="stylesheet">
+<link rel="stylesheet" href="maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/www_subdomain/bootstrap.min.css">
+<link href="css/alertify.min.css" rel="stylesheet" />
+<link href="css/alertify-bootstrap.min.css" rel="stylesheet" />
+        <script type="text/javascript" src="charting_library/charting_library.min.js"></script>
+		<script type="text/javascript" src="datafeeds/udf/dist/polyfills.js"></script>
+		<script type="text/javascript" src="datafeeds/udf/dist/bundle.js"></script>
+		<script type="text/javascript">
+            function getParameterByName(name) {
+                name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
+                var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
+                        results = regex.exec(location.search);
+                return results === null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
+            }
+			TradingView.onready(function()
+			{
+			    				var widget = window.tvWidget = new TradingView.widget({
+					// debug: true, // uncomment this line to see Library errors and warnings in the console
+					autosize: true,
+					symbol: 'XTO',
+					interval: 'D',
+					toolbar_bg: '#282828',
+					container_id: "tv_chart_container",
+					//	BEWARE: no trailing slash is expected in feed URL
+					datafeed: new Datafeeds.UDFCompatibleDatafeed("https://dex.extoke.com/charting_custom_datafeed"),
+					library_path: "charting_library/",
+					locale: getParameterByName('lang') || "en",
+					//	Regression Trend-related functionality is not implemented yet, so it's hidden for a while
+					drawings_access: { type: 'black', tools: [ { name: "Regression Trend" } ] },
+					disabled_features: ["use_localstorage_for_settings"],
+					enabled_features: ["study_templates"],
+					charts_storage_url: 'http://saveload.tradingview.com',
+                    charts_storage_api_version: "1.1",
+					client_id: 'tradingview.com',
+					user_id: 'public_user_id',
+					height: '100%',
+					preset: "mobile",
+					loading_screen: { backgroundColor: "#000000" },
+                    overrides: {
+                       "paneProperties.background": "#000",
+                        "paneProperties.vertGridProperties.color": "#282828",
+                        "paneProperties.horzGridProperties.color": "#282828",
+                        "symbolWatermarkProperties.transparency": 90,
+                        "scalesProperties.textColor" : "#AAA",
+                        "symbolWatermarkProperties.color": "#fff"
+                    }
+				});
+			});
+		</script>
+</head>
+	<body class="theme-dark cover" data-gr-c-s-loaded="true" style="overflow-y: auto;">
+  <div id="tokenDepositLoaderDiv" style="z-index: 1000; height: 100%; width: 100%; background-color: #000000f2; position: fixed; text-align: center;padding-top:100px;display:none;">
+  <center>
+   <img src="https://loading.io/spinners/square/index.svg" >
+     <h3>Please wait while Token Deposit is being completed. <br>It may take some time as transaction being confirmed.</h3>
+   </center>
+</div>
+<div id="tradeWaitingDiv" style="z-index: 1000; height: 100%; width: 100%; background-color: #000000f2; position: fixed; text-align: center;padding-top:100px;display:none;">
+  <center>
+   <img src="https://loading.io/spinners/square/index.svg" >
+     <h3>Please wait while trade is being completed</h3>
+   </center>
+</div>
+		<script type="text/javascript">let themeName
+  try {
+    // inlined for performance reasons
+    // in order to prevent flashes during CPR
+    themeName = window.localStorage.getItem('_theme')
+  } catch (e) {}
+  document.body.classList.add('theme-' + (themeName || 'dark'))
+  </script>
+  <div class="app">
+	<header class="main_header">
+	    <div class="main_header__left">
+            <a href="index.html" class="main_header__logo router-link-exact-active router-link-active">
+                <img src="images/title.png">
+            </a>
+            <button id="flip" class="btn btn-transparent switcher switcher-menu">
+                <!--<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="icon icon-menu_toggle">-->
+                <!--    <g>-->
+                <!--      <path d="M24,3c0-0.6-0.4-1-1-1H1C0.4,2,0,2.4,0,3v2c0,0.6,0.4,1,1,1h22c0.6,0,1-0.4,1-1V3z"></path>-->
+                <!--      <path d="M24,11c0-0.6-0.4-1-1-1H1c-0.6,0-1,0.4-1,1v2c0,0.6,0.4,1,1,1h22c0.6,0,1-0.4,1-1V11z"></path>-->
+                <!--      <path d="M24,19c0-0.6-0.4-1-1-1H1c-0.6,0-1,0.4-1,1v2c0,0.6,0.4,1,1,1h22c0.6,0,1-0.4,1-1V19z"></path>-->
+                <!--    </g>-->
+                <!--</svg>-->
+                <span class="glyphicon glyphicon-menu-hamburger" aria-hidden="true"></span>
+            </button>
+            <div id="panel" class="block main_header__nav">
+                <a class="main_header__nav_link switcher switcher-free_list change-price">
+                     TOKEN SEARCH
+		        </a>
+		        <a href="https://docs.google.com/forms/d/e/1FAIpQLScPHAF0lBSMMDGKRXsOux6l6lEKSZ4GxLc6GU1Qee-tWRyHtA/viewform" target="_blank" class="main_header__nav_link">
+                    LIST TOKEN
+                </a>
+                <a href="https://twitter.com/ex_toke" target="_blank" class="main_header__nav_link">
+                    TWITTER
+                </a>
+                <a href="https://extoke.com/support/" target="_blank" class="main_header__nav_link" style="color: #fff; text-decoration: none;">
+                    <span class="btn__text">SUPPORT</span>
+                </a>
+            </div>
+         </div>
+         <div class="main_header__right">
+            <!--<button class="btn btn-transparent switcher switcher-tutorial change-price">-->
+            <!--    <a href="https://www.extoke.com/about/help1.pdf" target="_blank" style="color: #fff; text-decoration: none;">-->
+            <!--        <span class="btn__text">HELP</span>-->
+            <!--    </a>-->
+            <!--</button>-->
+            <button class="btn btn-transparent switcher switcher-wallet change-prices">
+                <img src="images/purse _2_.png" alt="purse">
+                <!--<span class="btn__text for-desktop-view">Wallet</span>-->
+               <span class="btn__text for-tablet-view">Wallet</span>
+            </button>
+<div id="accounts-custom2" class="switcher switcher-menu_extra dropdown">
+    <div class="btn-group">
+        <button  class="btn btn-default btn-lg dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="padding: 15px 20px 15px 2px;height: 63px;color: #e4dfdf;font-size: 16px;font-weight: 300;font-family: Open Sans,sans-serif;line-height: 33px;">
+        <span class="glyphicon glyphicon-user" aria-hidden="true" style="margin-right: 6px;"></span>
+        <span class="select-acc">Loading..</span>
+        <span class="caret" style="margin-left: 5px;"></span>
+        </button>
+                </div>
+            </div>
+        </div>
+    </header>
+	<main class="content content-trade">
+		<div class="container container-wide" style="margin-left: 8px;margin-right: 8px; padding-left: 0; padding-right: 0;margin-left: 8px;">
+				<div class="ticker_wrapper">
+           <button class="btn btn-transparent change-price" onclick="myFunction()" style="padding: 0;
+    border: 0!important;">
+						<div class="block block-light" >
+							<div class="ticker_list_switcher__token_info">
+								<span class="ticker_list_switcher__currency" style="color: #ead86a;">ExToke (XTO)</span> 
+								<span class="glyphicon glyphicon-refresh" aria-hidden="true" style="margin: 0 10px; color: #ead86a;"></span> 
+								<span class="ticker_list_switcher__quote_currency" style="color: #ead86a;">ETH</span>
+							</div> 
+							<div class="ticker_list_switcher__token_data">
+								<span>
+									<a href="https://etherscan.io/address/0x28925299ee1edd8fd68316eaa64b651456694f0f" target="_blank">Contract: 0x28925299...
+                  </a>
+								</span> 
+								<a href="https://twitter.com/ex_toke" target="_blank">
+									          <img src="assets/img/twitter.png">
+								              </a>
+								              <a href="https://t.me/extoke" target="_blank">
+									          <img src="assets/img/telegram.png">
+								              </a>
+								              <a href="https://extoke.com/" target="_blank">
+									          <img src="assets/img/website.png">
+								              </a>
+							</div>
+						</div> 
+						<!-- <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 9 13" class="icon icon-angle icon-primary">
+							<path fill-rule="evenodd" d="M6.702,12.963 C6.320,12.963 5.938,12.807 5.647,12.494 L1.366,7.886 C0.791,7.266 0.791,6.266 1.366,5.647 L5.647,1.039 C6.226,0.416 7.167,0.413 7.750,1.031 C8.332,1.649 8.336,2.656 7.757,3.278 L4.516,6.766 L7.757,10.254 C8.336,10.877 8.332,11.883 7.750,12.502 C7.460,12.809 7.081,12.963 6.702,12.963 Z"></path>
+						</svg> -->
+					 </button>
+					<div class="ticker_info block block-light ticker_info-no_secondary">
+						<div class="ticker_info__param">
+							<div class="ticker_info__param_name">24hr Vol</div> 
+							<div class="ticker_info__param_value">9,000.00</div>
+						</div>  
+						<div class="ticker_info__param">
+							<div class="ticker_info__param_name">24hr High</div> 
+							<div class="ticker_info__param_value">0.00000100</div>
+							 <!---->
+							</div> 
+						<div class="ticker_info__param">
+							<div class="ticker_info__param_name">24hr Low</div> 
+							<div class="ticker_info__param_value">0.00000090</div> 
+							<!---->
+						</div> 
+                <div class="ticker_info__param"><div class="ticker_info__param_name">Last Price</div> 
+                <div class="ticker_info__param_value">0.00000090</div></div></div></div>
+<div id="tv_chart_container" class="sq-price"></div>
+      <div id="myDIV" class="ticker_list block block-light none-sq-price">
+        <div class="tabs"><ul class="tabs__list"><li class="tabs__list_item tabs__list_item-active">XTO/ETH</li></ul>
+        </div>
+        <div class="ticker_list__header">
+            <div class="form form-search"><div class="form__input_group"><!----> <div class="form__input"><!----> <span class="form__input_addon form__input_addon-append"><svg width="16" height="16" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" class="icon icon-search icon-primary"><path d="M9,18a9,9,0,1,1,9-9A9,9,0,0,1,9,18ZM9,2a7,7,0,1,0,7,7A7,7,0,0,0,9,2ZM23,24a1,1,0,0,1-.71-.29l-8-8a1,1,0,0,1,1.42-1.42l8,8a1,1,0,0,1,0,1.42A1,1,0,0,1,23,24Z"></path></svg></span> 
+        <input type="text" placeholder="Search..." autocomplete="off" id="search_keywords">
+        </div></div></div>
+        <button class="btn btn-transparent btn-icon_holder ticker_list__close" onclick="myFunctionsh()"><svg width="20" height="20" viewBox="0 0 78 78" xmlns="http://www.w3.org/2000/svg" class="icon icon-close icon-warn"><path d="M50,10.92A39.08,39.08,0,1,0,89.08,50,39.08,39.08,0,0,0,50,10.92ZM67,62.8a3,3,0,0,1-2.12,5.12,3,3,0,0,1-2.12-.87L50,54.24,37.2,67a3,3,0,0,1-2.12.88A3,3,0,0,1,33,62.8L45.76,50,33,37.2A3,3,0,1,1,37.2,33L50,45.76,62.8,33A3,3,0,0,1,67,37.2L54.24,50Z" transform="translate(-10.92 -10.92)"></path></svg></button>
+      </div>
+       <div role="grid" aria-readonly="true" class="data_table tabs__tab_content data_table-hover data_table-inverted"> 
+          <div class="data_table__head"><div role="row" class="data_table__row"><div role="gridcell" class="data_table__cell ticker_list__favorites">Symbol</div> <div role="gridcell" class="data_table__cell data_table__cell-amount">
+              Coin
+              <span class="data_table__sorter"></span></div> <div role="gridcell" class="data_table__cell ticker_list__token_name">Name</div> <div role="gridcell" class="data_table__cell ticker_list__token_name">EtherScan</div> <div role="gridcell" class="data_table__cell ticker_list__token_name">Links</div></div></div>
+              <div class="data_table__body" id="data_table__body">
+                <div role="row" class="data_table__row" onclick="location.href='/?token=AGSTN';"><div role="gridcell" class="data_table__cell ticker_list__favorites"><a class="btn btn-transparent"><img style="width: 15px;" src="assets/img/tokensymbol.png" /></a></div> <div role="gridcell" class="data_table__cell data_table__cell-amount">AGSTN</div> <div role="gridcell" class="data_table__cell ticker_list__token_name ticker_list__token_name-text_left">AgesToken</div> <div role="gridcell" class="data_table__cell ticker_list__token_name"><a href="https://etherscan.io/address/0x7b01b46d606ebfd30cc1581e513d97423ea63f10" target="_blank" class="ticker_list__ether_scan_link">0x7b01b46d606eb...</a></div> <div role="gridcell" class="data_table__cell ticker_list__token_link"> <!---->  <!----> </div></div><div role="row" class="data_table__row" onclick="location.href='/?token=ALTX';"><div role="gridcell" class="data_table__cell ticker_list__favorites"><a class="btn btn-transparent"><img style="width: 15px;" src="assets/img/tokensymbol.png" /></a></div> <div role="gridcell" class="data_table__cell data_table__cell-amount">ALTX</div> <div role="gridcell" class="data_table__cell ticker_list__token_name ticker_list__token_name-text_left">ALTTEX</div> <div role="gridcell" class="data_table__cell ticker_list__token_name"><a href="https://etherscan.io/address/0xb1ed41dc1fe9b723a31137afdd1201d17917fe91" target="_blank" class="ticker_list__ether_scan_link">0xb1ed41dc1fe9b...</a></div> <div role="gridcell" class="data_table__cell ticker_list__token_link"> <!---->  <!----> </div></div><div role="row" class="data_table__row" onclick="location.href='/?token=AURA';"><div role="gridcell" class="data_table__cell ticker_list__favorites"><a class="btn btn-transparent"><img style="width: 15px;" src="assets/img/tokensymbol.png" /></a></div> <div role="gridcell" class="data_table__cell data_table__cell-amount">AURA</div> <div role="gridcell" class="data_table__cell ticker_list__token_name ticker_list__token_name-text_left">Aura (IDEX)</div> <div role="gridcell" class="data_table__cell ticker_list__token_name"><a href="https://etherscan.io/address/0xcdcfc0f66c522fd086a1b725ea3c0eeb9f9e8814" target="_blank" class="ticker_list__ether_scan_link">0xcdcfc0f66c522...</a></div> <div role="gridcell" class="data_table__cell ticker_list__token_link"><a href="https://twitter.com/aurora_dao" target="_blank"> <img src="assets/img/twitter.png"> </a>  <!----> <a href="https://t.me/joinchat/FT1IVA8AWHiyUkU3adehxA" target="_blank"> <img src="assets/img/telegram.png"> </a>  <!----> <a href="https://idex.market/" target="_blank"> <img src="assets/img/website.png"> </a> </div></div><div role="row" class="data_table__row" onclick="location.href='/?token=BLO';"><div role="gridcell" class="data_table__cell ticker_list__favorites"><a class="btn btn-transparent"><img style="width: 15px;" src="assets/img/tokensymbol.png" /></a></div> <div role="gridcell" class="data_table__cell data_table__cell-amount">BLO</div> <div role="gridcell" class="data_table__cell ticker_list__token_name ticker_list__token_name-text_left">Blok</div> <div role="gridcell" class="data_table__cell ticker_list__token_name"><a href="https://etherscan.io/address/0x8426d0dc03335d4a391bf4cf7fe546ff89549de4" target="_blank" class="ticker_list__ether_scan_link">0x8426d0dc03335...</a></div> <div role="gridcell" class="data_table__cell ticker_list__token_link"> <!---->  <!----> </div></div><div role="row" class="data_table__row" onclick="location.href='/?token=BNB';"><div role="gridcell" class="data_table__cell ticker_list__favorites"><a class="btn btn-transparent"><img style="width: 15px;" src="assets/img/tokensymbol.png" /></a></div> <div role="gridcell" class="data_table__cell data_table__cell-amount">BNB</div> <div role="gridcell" class="data_table__cell ticker_list__token_name ticker_list__token_name-text_left">Binance</div> <div role="gridcell" class="data_table__cell ticker_list__token_name"><a href="https://etherscan.io/address/0xB8c77482e45F1F44dE1745F52C74426C631bDD52" target="_blank" class="ticker_list__ether_scan_link">0xB8c77482e45F1...</a></div> <div role="gridcell" class="data_table__cell ticker_list__token_link"><a href="https://twitter.com/binance" target="_blank"> <img src="assets/img/twitter.png"> </a>  <!----> <a href="https://www.binance.com" target="_blank"> <img src="assets/img/telegram.png"> </a>  <!----> <a href="https://www.binance.com" target="_blank"> <img src="assets/img/website.png"> </a> </div></div><div role="row" class="data_table__row" onclick="location.href='/?token=BNST';"><div role="gridcell" class="data_table__cell ticker_list__favorites"><a class="btn btn-transparent"><img style="width: 15px;" src="assets/img/tokensymbol.png" /></a></div> <div role="gridcell" class="data_table__cell data_table__cell-amount">BNST</div> <div role="gridcell" class="data_table__cell ticker_list__token_name ticker_list__token_name-text_left">BASIS NEURO</div> <div role="gridcell" class="data_table__cell ticker_list__token_name"><a href="https://etherscan.io/address/0xf58a6e83c11487d5c702eec6e401cab463c2cd20" target="_blank" class="ticker_list__ether_scan_link">0xf58a6e83c1148...</a></div> <div role="gridcell" class="data_table__cell ticker_list__token_link"><a href="https://twitter.com/basis_neuro" target="_blank"> <img src="assets/img/twitter.png"> </a>  <!----> <a href="https://t.me/basisneurocom" target="_blank"> <img src="assets/img/telegram.png"> </a>  <!----> <a href="https://basisneuro.com" target="_blank"> <img src="assets/img/website.png"> </a> </div></div><div role="row" class="data_table__row" onclick="location.href='/?token=BNT';"><div role="gridcell" class="data_table__cell ticker_list__favorites"><a class="btn btn-transparent"><img style="width: 15px;" src="assets/img/tokensymbol.png" /></a></div> <div role="gridcell" class="data_table__cell data_table__cell-amount">BNT</div> <div role="gridcell" class="data_table__cell ticker_list__token_name ticker_list__token_name-text_left">Bancor</div> <div role="gridcell" class="data_table__cell ticker_list__token_name"><a href="https://etherscan.io/address/0x1f573d6fb3f13d689ff844b4ce37794d79a7ff1c" target="_blank" class="ticker_list__ether_scan_link">0x1f573d6fb3f13...</a></div> <div role="gridcell" class="data_table__cell ticker_list__token_link"><a href="https://twitter.com/bancornetwork" target="_blank"> <img src="assets/img/twitter.png"> </a>  <!----> <a href="https://t.me/bancor" target="_blank"> <img src="assets/img/telegram.png"> </a>  <!----> <a href="https://bancor.network/" target="_blank"> <img src="assets/img/website.png"> </a> </div></div><div role="row" class="data_table__row" onclick="location.href='/?token=BOS';"><div role="gridcell" class="data_table__cell ticker_list__favorites"><a class="btn btn-transparent"><img style="width: 15px;" src="assets/img/tokensymbol.png" /></a></div> <div role="gridcell" class="data_table__cell data_table__cell-amount">BOS</div> <div role="gridcell" class="data_table__cell ticker_list__token_name ticker_list__token_name-text_left">Bostoken</div> <div role="gridcell" class="data_table__cell ticker_list__token_name"><a href="https://etherscan.io/address/0x3c0cac8290e2a6241814f812259278bea9050838" target="_blank" class="ticker_list__ether_scan_link">0x3c0cac8290e2a...</a></div> <div role="gridcell" class="data_table__cell ticker_list__token_link"> <!---->  <!----> </div></div><div role="row" class="data_table__row" onclick="location.href='/?token=BTCC';"><div role="gridcell" class="data_table__cell ticker_list__favorites"><a class="btn btn-transparent"><img style="width: 15px;" src="assets/img/tokensymbol.png" /></a></div> <div role="gridcell" class="data_table__cell data_table__cell-amount">BTCC</div> <div role="gridcell" class="data_table__cell ticker_list__token_name ticker_list__token_name-text_left">BitcoinCrown</div> <div role="gridcell" class="data_table__cell ticker_list__token_name"><a href="https://etherscan.io/address/0xc0c05862cca68b0b4c806796a6e7d965a6f18095" target="_blank" class="ticker_list__ether_scan_link">0xc0c05862cca68...</a></div> <div role="gridcell" class="data_table__cell ticker_list__token_link"> <!---->  <!----> </div></div><div role="row" class="data_table__row" onclick="location.href='/?token=BTCONE';"><div role="gridcell" class="data_table__cell ticker_list__favorites"><a class="btn btn-transparent"><img style="width: 15px;" src="assets/img/tokensymbol.png" /></a></div> <div role="gridcell" class="data_table__cell data_table__cell-amount">BTCONE</div> <div role="gridcell" class="data_table__cell ticker_list__token_name ticker_list__token_name-text_left">BitCoin One</div> <div role="gridcell" class="data_table__cell ticker_list__token_name"><a href="https://etherscan.io/address/0x87f5e8c3425218837f3cb67db941af0c01323e56" target="_blank" class="ticker_list__ether_scan_link">0x87f5e8c342521...</a></div> <div role="gridcell" class="data_table__cell ticker_list__token_link"> <!---->  <!----> </div></div><div role="row" class="data_table__row" onclick="location.href='/?token=BTK';"><div role="gridcell" class="data_table__cell ticker_list__favorites"><a class="btn btn-transparent"><img style="width: 15px;" src="assets/img/tokensymbol.png" /></a></div> <div role="gridcell" class="data_table__cell data_table__cell-amount">BTK</div> <div role="gridcell" class="data_table__cell ticker_list__token_name ticker_list__token_name-text_left">Bitcoin Token</div> <div role="gridcell" class="data_table__cell ticker_list__token_name"><a href="https://etherscan.io/address/0xdb8646f5b487b5dd979fac618350e85018f557d4" target="_blank" class="ticker_list__ether_scan_link">0xdb8646f5b487b...</a></div> <div role="gridcell" class="data_table__cell ticker_list__token_link"> <!---->  <!----> </div></div><div role="row" class="data_table__row" onclick="location.href='/?token=BTP';"><div role="gridcell" class="data_table__cell ticker_list__favorites"><a class="btn btn-transparent"><img style="width: 15px;" src="assets/img/tokensymbol.png" /></a></div> <div role="gridcell" class="data_table__cell data_table__cell-amount">BTP</div> <div role="gridcell" class="data_table__cell ticker_list__token_name ticker_list__token_name-text_left">Bitcoin Protocol </div> <div role="gridcell" class="data_table__cell ticker_list__token_name"><a href="https://etherscan.io/address/0xe1e70407c8cdb588425fe7736e30df139110949f" target="_blank" class="ticker_list__ether_scan_link">0xe1e70407c8cdb...</a></div> <div role="gridcell" class="data_table__cell ticker_list__token_link"><a href="index.html" target="_blank"> <img src="assets/img/twitter.png"> </a>  <!----> <a href="https://bitcointalk.org/index.php?topic=4713257 " target="_blank"> <img src="assets/img/telegram.png"> </a>  <!----> <a href="https://btc-protocol.org/ " target="_blank"> <img src="assets/img/website.png"> </a> </div></div><div role="row" class="data_table__row" onclick="location.href='/?token=CAPC';"><div role="gridcell" class="data_table__cell ticker_list__favorites"><a class="btn btn-transparent"><img style="width: 15px;" src="assets/img/tokensymbol.png" /></a></div> <div role="gridcell" class="data_table__cell data_table__cell-amount">CAPC</div> <div role="gridcell" class="data_table__cell ticker_list__token_name ticker_list__token_name-text_left">CampingCoin</div> <div role="gridcell" class="data_table__cell ticker_list__token_name"><a href="https://etherscan.io/address/0x3f8fd16e55cfee539b81cc47bb9682090988ebd4" target="_blank" class="ticker_list__ether_scan_link">0x3f8fd16e55cfe...</a></div> <div role="gridcell" class="data_table__cell ticker_list__token_link"> <!---->  <!----> </div></div><div role="row" class="data_table__row" onclick="location.href='/?token=CMAP';"><div role="gridcell" class="data_table__cell ticker_list__favorites"><a class="btn btn-transparent"><img style="width: 15px;" src="assets/img/tokensymbol.png" /></a></div> <div role="gridcell" class="data_table__cell data_table__cell-amount">CMAP</div> <div role="gridcell" class="data_table__cell ticker_list__token_name ticker_list__token_name-text_left">CMAP Token</div> <div role="gridcell" class="data_table__cell ticker_list__token_name"><a href="https://etherscan.io/address/0x7b267eea6e679e747c0cb1d6b453a976d3638d27" target="_blank" class="ticker_list__ether_scan_link">0x7b267eea6e679...</a></div> <div role="gridcell" class="data_table__cell ticker_list__token_link"> <!---->  <!----> </div></div><div role="row" class="data_table__row" onclick="location.href='/?token=COB';"><div role="gridcell" class="data_table__cell ticker_list__favorites"><a class="btn btn-transparent"><img style="width: 15px;" src="assets/img/tokensymbol.png" /></a></div> <div role="gridcell" class="data_table__cell data_table__cell-amount">COB</div> <div role="gridcell" class="data_table__cell ticker_list__token_name ticker_list__token_name-text_left">Cobinhood</div> <div role="gridcell" class="data_table__cell ticker_list__token_name"><a href="https://etherscan.io/address/0xb2f7eb1f2c37645be61d73953035360e768d81e6" target="_blank" class="ticker_list__ether_scan_link">0xb2f7eb1f2c376...</a></div> <div role="gridcell" class="data_table__cell ticker_list__token_link"><a href="https://twitter.com/cobinhood" target="_blank"> <img src="assets/img/twitter.png"> </a>  <!----> <a href="https://t.me/joinchat/GhBM6A2ktfrwdjzh9hDfQA" target="_blank"> <img src="assets/img/telegram.png"> </a>  <!----> <a href="https://cobinhood.com/" target="_blank"> <img src="assets/img/website.png"> </a> </div></div><div role="row" class="data_table__row" onclick="location.href='/?token=CRAFTR';"><div role="gridcell" class="data_table__cell ticker_list__favorites"><a class="btn btn-transparent"><img style="width: 15px;" src="assets/img/tokensymbol.png" /></a></div> <div role="gridcell" class="data_table__cell data_table__cell-amount">CRAFTR</div> <div role="gridcell" class="data_table__cell ticker_list__token_name ticker_list__token_name-text_left">CRAFTR</div> <div role="gridcell" class="data_table__cell ticker_list__token_name"><a href="https://etherscan.io/address/0xf19eac69f9566f0b40660bd0cc16234330f38456" target="_blank" class="ticker_list__ether_scan_link">0xf19eac69f9566...</a></div> <div role="gridcell" class="data_table__cell ticker_list__token_link"> <!---->  <!----> </div></div><div role="row" class="data_table__row" onclick="location.href='/?token=CYFM';"><div role="gridcell" class="data_table__cell ticker_list__favorites"><a class="btn btn-transparent"><img style="width: 15px;" src="assets/img/tokensymbol.png" /></a></div> <div role="gridcell" class="data_table__cell data_table__cell-amount">CYFM</div> <div role="gridcell" class="data_table__cell ticker_list__token_name ticker_list__token_name-text_left">CYBERFM</div> <div role="gridcell" class="data_table__cell ticker_list__token_name"><a href="https://etherscan.io/address/0x3f06b5d78406cd97bdf10f5c420b241d32759c80" target="_blank" class="ticker_list__ether_scan_link">0x3f06b5d78406c...</a></div> <div role="gridcell" class="data_table__cell ticker_list__token_link"> <!---->  <!----> </div></div><div role="row" class="data_table__row" onclick="location.href='/?token=DCN';"><div role="gridcell" class="data_table__cell ticker_list__favorites"><a class="btn btn-transparent"><img style="width: 15px;" src="assets/img/tokensymbol.png" /></a></div> <div role="gridcell" class="data_table__cell data_table__cell-amount">DCN</div> <div role="gridcell" class="data_table__cell ticker_list__token_name ticker_list__token_name-text_left">Dental Coin</div> <div role="gridcell" class="data_table__cell ticker_list__token_name"><a href="https://etherscan.io/address/0x08d32b0da63e2C3bcF8019c9c5d849d7a9d791e6" target="_blank" class="ticker_list__ether_scan_link">0x08d32b0da63e2...</a></div> <div role="gridcell" class="data_table__cell ticker_list__token_link"><a href="https://twitter.com/dentacoin" target="_blank"> <img src="assets/img/twitter.png"> </a>  <!----> <a href="https://t.me/dentacoin" target="_blank"> <img src="assets/img/telegram.png"> </a>  <!----> <a href="https://dentacoin.com/" target="_blank"> <img src="assets/img/website.png"> </a> </div></div><div role="row" class="data_table__row" onclick="location.href='/?token=DELTA';"><div role="gridcell" class="data_table__cell ticker_list__favorites"><a class="btn btn-transparent"><img style="width: 15px;" src="assets/img/tokensymbol.png" /></a></div> <div role="gridcell" class="data_table__cell data_table__cell-amount">DELTA</div> <div role="gridcell" class="data_table__cell ticker_list__token_name ticker_list__token_name-text_left">Deltachain</div> <div role="gridcell" class="data_table__cell ticker_list__token_name"><a href="https://etherscan.io/address/0xde1e0ae6101b46520cf66fdc0b1059c5cc3d106c" target="_blank" class="ticker_list__ether_scan_link">0xde1e0ae6101b4...</a></div> <div role="gridcell" class="data_table__cell ticker_list__token_link"> <!---->  <!----> </div></div><div role="row" class="data_table__row" onclick="location.href='/?token=DFS';"><div role="gridcell" class="data_table__cell ticker_list__favorites"><a class="btn btn-transparent"><img style="width: 15px;" src="assets/img/tokensymbol.png" /></a></div> <div role="gridcell" class="data_table__cell data_table__cell-amount">DFS</div> <div role="gridcell" class="data_table__cell ticker_list__token_name ticker_list__token_name-text_left">Digital Fantasy Sports</div> <div role="gridcell" class="data_table__cell ticker_list__token_name"><a href="https://etherscan.io/address/0x45eD02e374Aef2e4b34c04e86AD9D45891d10751" target="_blank" class="ticker_list__ether_scan_link">0x45eD02e374Aef...</a></div> <div role="gridcell" class="data_table__cell ticker_list__token_link"> <!---->  <!----> </div></div><div role="row" class="data_table__row" onclick="location.href='/?token=DID';"><div role="gridcell" class="data_table__cell ticker_list__favorites"><a class="btn btn-transparent"><img style="width: 15px;" src="assets/img/tokensymbol.png" /></a></div> <div role="gridcell" class="data_table__cell data_table__cell-amount">DID</div> <div role="gridcell" class="data_table__cell ticker_list__token_name ticker_list__token_name-text_left">DECENTRALIZED ID</div> <div role="gridcell" class="data_table__cell ticker_list__token_name"><a href="https://etherscan.io/address/0x315970be5a362fc89ab4240c52a78043211fff1e" target="_blank" class="ticker_list__ether_scan_link">0x315970be5a362...</a></div> <div role="gridcell" class="data_table__cell ticker_list__token_link"> <!---->  <!----> </div></div><div role="row" class="data_table__row" onclick="location.href='/?token=EMP';"><div role="gridcell" class="data_table__cell ticker_list__favorites"><a class="btn btn-transparent"><img style="width: 15px;" src="assets/img/tokensymbol.png" /></a></div> <div role="gridcell" class="data_table__cell data_table__cell-amount">EMP</div> <div role="gridcell" class="data_table__cell ticker_list__token_name ticker_list__token_name-text_left">Emporeum</div> <div role="gridcell" class="data_table__cell ticker_list__token_name"><a href="https://etherscan.io/address/0xf2eba4acc9b86744791ecc12156080b5b5a7bf56" target="_blank" class="ticker_list__ether_scan_link">0xf2eba4acc9b86...</a></div> <div role="gridcell" class="data_table__cell ticker_list__token_link"> <!---->  <!----> </div></div><div role="row" class="data_table__row" onclick="location.href='/?token=ENU';"><div role="gridcell" class="data_table__cell ticker_list__favorites"><a class="btn btn-transparent"><img style="width: 15px;" src="assets/img/tokensymbol.png" /></a></div> <div role="gridcell" class="data_table__cell data_table__cell-amount">ENU</div> <div role="gridcell" class="data_table__cell ticker_list__token_name ticker_list__token_name-text_left">EnuMivo</div> <div role="gridcell" class="data_table__cell ticker_list__token_name"><a href="https://etherscan.io/address/0x275b69aa7c8c1d648a0557656bce1c286e69a29d" target="_blank" class="ticker_list__ether_scan_link">0x275b69aa7c8c1...</a></div> <div role="gridcell" class="data_table__cell ticker_list__token_link"> <!---->  <!----> </div></div><div role="row" class="data_table__row" onclick="location.href='/?token=EPH';"><div role="gridcell" class="data_table__cell ticker_list__favorites"><a class="btn btn-transparent"><img style="width: 15px;" src="assets/img/tokensymbol.png" /></a></div> <div role="gridcell" class="data_table__cell data_table__cell-amount">EPH</div> <div role="gridcell" class="data_table__cell ticker_list__token_name ticker_list__token_name-text_left">Euphoria</div> <div role="gridcell" class="data_table__cell ticker_list__token_name"><a href="https://etherscan.io/address/0x875089a734213ca39f0d93c2bbb8209827ec5e9f" target="_blank" class="ticker_list__ether_scan_link">0x875089a734213...</a></div> <div role="gridcell" class="data_table__cell ticker_list__token_link"> <!---->  <!----> </div></div><div role="row" class="data_table__row" onclick="location.href='/?token=ERT';"><div role="gridcell" class="data_table__cell ticker_list__favorites"><a class="btn btn-transparent"><img style="width: 15px;" src="assets/img/tokensymbol.png" /></a></div> <div role="gridcell" class="data_table__cell data_table__cell-amount">ERT</div> <div role="gridcell" class="data_table__cell ticker_list__token_name ticker_list__token_name-text_left">Eristica</div> <div role="gridcell" class="data_table__cell ticker_list__token_name"><a href="https://etherscan.io/address/0x92A5B04D0ED5D94D7a193d1d334D3D16996f4E13" target="_blank" class="ticker_list__ether_scan_link">0x92A5B04D0ED5D...</a></div> <div role="gridcell" class="data_table__cell ticker_list__token_link"> <!---->  <!----> </div></div><div role="row" class="data_table__row" onclick="location.href='/?token=ETHL';"><div role="gridcell" class="data_table__cell ticker_list__favorites"><a class="btn btn-transparent"><img style="width: 15px;" src="assets/img/tokensymbol.png" /></a></div> <div role="gridcell" class="data_table__cell data_table__cell-amount">ETHL</div> <div role="gridcell" class="data_table__cell ticker_list__token_name ticker_list__token_name-text_left">Ethereum Limited</div> <div role="gridcell" class="data_table__cell ticker_list__token_name"><a href="https://etherscan.io/address/0x813a823F35132D822708124e01759C565AB4331d" target="_blank" class="ticker_list__ether_scan_link">0x813a823F35132...</a></div> <div role="gridcell" class="data_table__cell ticker_list__token_link"> <!---->  <!----> </div></div><div role="row" class="data_table__row" onclick="location.href='/?token=G';"><div role="gridcell" class="data_table__cell ticker_list__favorites"><a class="btn btn-transparent"><img style="width: 15px;" src="assets/img/tokensymbol.png" /></a></div> <div role="gridcell" class="data_table__cell data_table__cell-amount">G</div> <div role="gridcell" class="data_table__cell ticker_list__token_name ticker_list__token_name-text_left">GoldCoin Cash</div> <div role="gridcell" class="data_table__cell ticker_list__token_name"><a href="https://etherscan.io/address/0xe951a23c3cd0cfd3238b9476e7eba3efdaded8b2" target="_blank" class="ticker_list__ether_scan_link">0xe951a23c3cd0c...</a></div> <div role="gridcell" class="data_table__cell ticker_list__token_link"><a href="https://twitter.com/GoldcoinCash" target="_blank"> <img src="assets/img/twitter.png"> </a>  <!---->  <!----> <a href="https://goldcoincash.co" target="_blank"> <img src="assets/img/website.png"> </a> </div></div><div role="row" class="data_table__row" onclick="location.href='/?token=GOGRN';"><div role="gridcell" class="data_table__cell ticker_list__favorites"><a class="btn btn-transparent"><img style="width: 15px;" src="assets/img/tokensymbol.png" /></a></div> <div role="gridcell" class="data_table__cell data_table__cell-amount">GOGRN</div> <div role="gridcell" class="data_table__cell ticker_list__token_name ticker_list__token_name-text_left">EcoTrading</div> <div role="gridcell" class="data_table__cell ticker_list__token_name"><a href="https://etherscan.io/address/0xd2733da81d7dbdc7fb3d8b29dd8f1f7ab7b0323d" target="_blank" class="ticker_list__ether_scan_link">0xd2733da81d7db...</a></div> <div role="gridcell" class="data_table__cell ticker_list__token_link"> <!---->  <!----> </div></div><div role="row" class="data_table__row" onclick="location.href='/?token=Helios';"><div role="gridcell" class="data_table__cell ticker_list__favorites"><a class="btn btn-transparent"><img style="width: 15px;" src="assets/img/tokensymbol.png" /></a></div> <div role="gridcell" class="data_table__cell data_table__cell-amount">Helios</div> <div role="gridcell" class="data_table__cell ticker_list__token_name ticker_list__token_name-text_left">HLS</div> <div role="gridcell" class="data_table__cell ticker_list__token_name"><a href="https://etherscan.io/address/0xf5d714d9cd577b7daf83f84aea37a1eb0787e7ad" target="_blank" class="ticker_list__ether_scan_link">0xf5d714d9cd577...</a></div> <div role="gridcell" class="data_table__cell ticker_list__token_link"> <!---->  <!----> </div></div><div role="row" class="data_table__row" onclick="location.href='/?token=KEA';"><div role="gridcell" class="data_table__cell ticker_list__favorites"><a class="btn btn-transparent"><img style="width: 15px;" src="assets/img/tokensymbol.png" /></a></div> <div role="gridcell" class="data_table__cell data_table__cell-amount">KEA</div> <div role="gridcell" class="data_table__cell ticker_list__token_name ticker_list__token_name-text_left">KEA Coin</div> <div role="gridcell" class="data_table__cell ticker_list__token_name"><a href="https://etherscan.io/address/0x390d6673c1fa9dbb8000db1ae89252b7d531ab75" target="_blank" class="ticker_list__ether_scan_link">0x390d6673c1fa9...</a></div> <div role="gridcell" class="data_table__cell ticker_list__token_link"> <!---->  <!----> </div></div><div role="row" class="data_table__row" onclick="location.href='/?token=KIN';"><div role="gridcell" class="data_table__cell ticker_list__favorites"><a class="btn btn-transparent"><img style="width: 15px;" src="assets/img/tokensymbol.png" /></a></div> <div role="gridcell" class="data_table__cell data_table__cell-amount">KIN</div> <div role="gridcell" class="data_table__cell ticker_list__token_name ticker_list__token_name-text_left">KIN</div> <div role="gridcell" class="data_table__cell ticker_list__token_name"><a href="https://etherscan.io/address/0x818fc6c2ec5986bc6e2cbf00939d90556ab12ce5" target="_blank" class="ticker_list__ether_scan_link">0x818fc6c2ec598...</a></div> <div role="gridcell" class="data_table__cell ticker_list__token_link"><a href="https://twitter.com/@kin_foundation" target="_blank"> <img src="assets/img/twitter.png"> </a>  <!----> <a href="https://t.me/kinfoundation" target="_blank"> <img src="assets/img/telegram.png"> </a>  <!----> <a href="https://kinecosystem.org/" target="_blank"> <img src="assets/img/website.png"> </a> </div></div><div role="row" class="data_table__row" onclick="location.href='/?token=KNC';"><div role="gridcell" class="data_table__cell ticker_list__favorites"><a class="btn btn-transparent"><img style="width: 15px;" src="assets/img/tokensymbol.png" /></a></div> <div role="gridcell" class="data_table__cell data_table__cell-amount">KNC</div> <div role="gridcell" class="data_table__cell ticker_list__token_name ticker_list__token_name-text_left">Kyber Network</div> <div role="gridcell" class="data_table__cell ticker_list__token_name"><a href="https://etherscan.io/address/0xdd974d5c2e2928dea5f71b9825b8b646686bd200" target="_blank" class="ticker_list__ether_scan_link">0xdd974d5c2e292...</a></div> <div role="gridcell" class="data_table__cell ticker_list__token_link"><a href="https://twitter.com/kybernetwork" target="_blank"> <img src="assets/img/twitter.png"> </a>  <!----> <a href="https://t.me/kybernetwork" target="_blank"> <img src="assets/img/telegram.png"> </a>  <!----> <a href="https://kyber.network/" target="_blank"> <img src="assets/img/website.png"> </a> </div></div><div role="row" class="data_table__row" onclick="location.href='/?token=LAToken';"><div role="gridcell" class="data_table__cell ticker_list__favorites"><a class="btn btn-transparent"><img style="width: 15px;" src="assets/img/tokensymbol.png" /></a></div> <div role="gridcell" class="data_table__cell data_table__cell-amount">LAToken</div> <div role="gridcell" class="data_table__cell ticker_list__token_name ticker_list__token_name-text_left">LA</div> <div role="gridcell" class="data_table__cell ticker_list__token_name"><a href="https://etherscan.io/address/0xe50365f5d679cb98a1dd62d6f6e58e59321bcddf" target="_blank" class="ticker_list__ether_scan_link">0xe50365f5d679c...</a></div> <div role="gridcell" class="data_table__cell ticker_list__token_link"><a href="https://twitter.com/latokens" target="_blank"> <img src="assets/img/twitter.png"> </a>  <!----> <a href="https://t.me/latoken" target="_blank"> <img src="assets/img/telegram.png"> </a>  <!----> <a href="https://www.latoken.com/" target="_blank"> <img src="assets/img/website.png"> </a> </div></div><div role="row" class="data_table__row" onclick="location.href='/?token=LIKE';"><div role="gridcell" class="data_table__cell ticker_list__favorites"><a class="btn btn-transparent"><img style="width: 15px;" src="assets/img/tokensymbol.png" /></a></div> <div role="gridcell" class="data_table__cell data_table__cell-amount">LIKE</div> <div role="gridcell" class="data_table__cell ticker_list__token_name ticker_list__token_name-text_left">LIKE COIN</div> <div role="gridcell" class="data_table__cell ticker_list__token_name"><a href="https://etherscan.io/address/0x02F61Fd266DA6E8B102D4121f5CE7b992640CF98" target="_blank" class="ticker_list__ether_scan_link">0x02F61Fd266DA6...</a></div> <div role="gridcell" class="data_table__cell ticker_list__token_link"> <!---->  <!----> </div></div><div role="row" class="data_table__row" onclick="location.href='/?token=MET';"><div role="gridcell" class="data_table__cell ticker_list__favorites"><a class="btn btn-transparent"><img style="width: 15px;" src="assets/img/tokensymbol.png" /></a></div> <div role="gridcell" class="data_table__cell data_table__cell-amount">MET</div> <div role="gridcell" class="data_table__cell ticker_list__token_name ticker_list__token_name-text_left">Metronome</div> <div role="gridcell" class="data_table__cell ticker_list__token_name"><a href="https://etherscan.io/address/0xa3d58c4e56fedcae3a7c43a725aee9a71f0ece4e" target="_blank" class="ticker_list__ether_scan_link">0xa3d58c4e56fed...</a></div> <div role="gridcell" class="data_table__cell ticker_list__token_link"> <!---->  <!----> </div></div><div role="row" class="data_table__row" onclick="location.href='/?token=MFTU';"><div role="gridcell" class="data_table__cell ticker_list__favorites"><a class="btn btn-transparent"><img style="width: 15px;" src="assets/img/tokensymbol.png" /></a></div> <div role="gridcell" class="data_table__cell data_table__cell-amount">MFTU</div> <div role="gridcell" class="data_table__cell ticker_list__token_name ticker_list__token_name-text_left">MFTU</div> <div role="gridcell" class="data_table__cell ticker_list__token_name"><a href="https://etherscan.io/address/0x05D412CE18F24040bB3Fa45CF2C69e506586D8e8" target="_blank" class="ticker_list__ether_scan_link">0x05D412CE18F24...</a></div> <div role="gridcell" class="data_table__cell ticker_list__token_link"> <!---->  <!----> </div></div><div role="row" class="data_table__row" onclick="location.href='/?token=MUXE ';"><div role="gridcell" class="data_table__cell ticker_list__favorites"><a class="btn btn-transparent"><img style="width: 15px;" src="assets/img/tokensymbol.png" /></a></div> <div role="gridcell" class="data_table__cell data_table__cell-amount">MUXE </div> <div role="gridcell" class="data_table__cell ticker_list__token_name ticker_list__token_name-text_left">MUXE </div> <div role="gridcell" class="data_table__cell ticker_list__token_name"><a href="https://etherscan.io/address/0x515669d308f887fd83a471c7764f5d084886d34d" target="_blank" class="ticker_list__ether_scan_link">0x515669d308f88...</a></div> <div role="gridcell" class="data_table__cell ticker_list__token_link"><a href="https://www.twitter.com/muxeproject" target="_blank"> <img src="assets/img/twitter.png"> </a>  <!----> <a href="https://t.me/MUXEproject " target="_blank"> <img src="assets/img/telegram.png"> </a>  <!----> <a href="https://www.muxe.io " target="_blank"> <img src="assets/img/website.png"> </a> </div></div><div role="row" class="data_table__row" onclick="location.href='/?token=NANJ';"><div role="gridcell" class="data_table__cell ticker_list__favorites"><a class="btn btn-transparent"><img style="width: 15px;" src="assets/img/tokensymbol.png" /></a></div> <div role="gridcell" class="data_table__cell data_table__cell-amount">NANJ</div> <div role="gridcell" class="data_table__cell ticker_list__token_name ticker_list__token_name-text_left">Nanjcoin</div> <div role="gridcell" class="data_table__cell ticker_list__token_name"><a href="https://etherscan.io/address/0xffe02ee4c69edf1b340fcad64fbd6b37a7b9e265" target="_blank" class="ticker_list__ether_scan_link">0xffe02ee4c69ed...</a></div> <div role="gridcell" class="data_table__cell ticker_list__token_link"> <!---->  <!----> </div></div><div role="row" class="data_table__row" onclick="location.href='/?token=NANO';"><div role="gridcell" class="data_table__cell ticker_list__favorites"><a class="btn btn-transparent"><img style="width: 15px;" src="assets/img/tokensymbol.png" /></a></div> <div role="gridcell" class="data_table__cell data_table__cell-amount">NANO</div> <div role="gridcell" class="data_table__cell ticker_list__token_name ticker_list__token_name-text_left">NANO COIN</div> <div role="gridcell" class="data_table__cell ticker_list__token_name"><a href="https://etherscan.io/address/0x9401089f3e8d11d7e4dea76c1755e6b75489884a" target="_blank" class="ticker_list__ether_scan_link">0x9401089f3e8d1...</a></div> <div role="gridcell" class="data_table__cell ticker_list__token_link"> <!---->  <!----> </div></div><div role="row" class="data_table__row" onclick="location.href='/?token=NEC';"><div role="gridcell" class="data_table__cell ticker_list__favorites"><a class="btn btn-transparent"><img style="width: 15px;" src="assets/img/tokensymbol.png" /></a></div> <div role="gridcell" class="data_table__cell data_table__cell-amount">NEC</div> <div role="gridcell" class="data_table__cell ticker_list__token_name ticker_list__token_name-text_left">EthFinex</div> <div role="gridcell" class="data_table__cell ticker_list__token_name"><a href="https://etherscan.io/address/0xcc80c051057b774cd75067dc48f8987c4eb97a5e" target="_blank" class="ticker_list__ether_scan_link">0xcc80c051057b7...</a></div> <div role="gridcell" class="data_table__cell ticker_list__token_link"><a href="https://twitter.com/ethfinex" target="_blank"> <img src="assets/img/twitter.png"> </a>  <!----> <a href="https://t.me/joinchat/GgM7eBFC-BdMYaC_3hN4Kg" target="_blank"> <img src="assets/img/telegram.png"> </a>  <!----> <a href="https://www.ethfinex.com/" target="_blank"> <img src="assets/img/website.png"> </a> </div></div><div role="row" class="data_table__row" onclick="location.href='/?token=NPXS';"><div role="gridcell" class="data_table__cell ticker_list__favorites"><a class="btn btn-transparent"><img style="width: 15px;" src="assets/img/tokensymbol.png" /></a></div> <div role="gridcell" class="data_table__cell data_table__cell-amount">NPXS</div> <div role="gridcell" class="data_table__cell ticker_list__token_name ticker_list__token_name-text_left">Pundi-X</div> <div role="gridcell" class="data_table__cell ticker_list__token_name"><a href="https://etherscan.io/address/0xa15c7ebe1f07caf6bff097d8a589fb8ac49ae5b3" target="_blank" class="ticker_list__ether_scan_link">0xa15c7ebe1f07c...</a></div> <div role="gridcell" class="data_table__cell ticker_list__token_link"><a href="https://twitter.com/PundiXLabs" target="_blank"> <img src="assets/img/twitter.png"> </a>  <!----> <a href="https://t.me/pundix" target="_blank"> <img src="assets/img/telegram.png"> </a>  <!----> <a href="https://pundix.com/" target="_blank"> <img src="assets/img/website.png"> </a> </div></div><div role="row" class="data_table__row" onclick="location.href='/?token=PMP';"><div role="gridcell" class="data_table__cell ticker_list__favorites"><a class="btn btn-transparent"><img style="width: 15px;" src="assets/img/tokensymbol.png" /></a></div> <div role="gridcell" class="data_table__cell data_table__cell-amount">PMP</div> <div role="gridcell" class="data_table__cell ticker_list__token_name ticker_list__token_name-text_left">Pump Token</div> <div role="gridcell" class="data_table__cell ticker_list__token_name"><a href="https://etherscan.io/address/0x4420f150fe4877560638bcf48668e1276ef0f27e" target="_blank" class="ticker_list__ether_scan_link">0x4420f150fe487...</a></div> <div role="gridcell" class="data_table__cell ticker_list__token_link"> <!---->  <!----> </div></div><div role="row" class="data_table__row" onclick="location.href='/?token=QUAD';"><div role="gridcell" class="data_table__cell ticker_list__favorites"><a class="btn btn-transparent"><img style="width: 15px;" src="assets/img/tokensymbol.png" /></a></div> <div role="gridcell" class="data_table__cell data_table__cell-amount">QUAD</div> <div role="gridcell" class="data_table__cell ticker_list__token_name ticker_list__token_name-text_left">QuadCoreChain</div> <div role="gridcell" class="data_table__cell ticker_list__token_name"><a href="https://etherscan.io/address/0xe0e705c9bff67188a79dc5f59f0b2675031a6055" target="_blank" class="ticker_list__ether_scan_link">0xe0e705c9bff67...</a></div> <div role="gridcell" class="data_table__cell ticker_list__token_link"> <!---->  <!----> </div></div><div role="row" class="data_table__row" onclick="location.href='/?token=RPIL';"><div role="gridcell" class="data_table__cell ticker_list__favorites"><a class="btn btn-transparent"><img style="width: 15px;" src="assets/img/tokensymbol.png" /></a></div> <div role="gridcell" class="data_table__cell data_table__cell-amount">RPIL</div> <div role="gridcell" class="data_table__cell ticker_list__token_name ticker_list__token_name-text_left">RedPill</div> <div role="gridcell" class="data_table__cell ticker_list__token_name"><a href="https://etherscan.io/address/0x9e386da8cdfcf8b9e7490e3f2a4589c570cb2b2f" target="_blank" class="ticker_list__ether_scan_link">0x9e386da8cdfcf...</a></div> <div role="gridcell" class="data_table__cell ticker_list__token_link"> <!---->  <!----> </div></div><div role="row" class="data_table__row" onclick="location.href='/?token=RTN';"><div role="gridcell" class="data_table__cell ticker_list__favorites"><a class="btn btn-transparent"><img style="width: 15px;" src="assets/img/tokensymbol.png" /></a></div> <div role="gridcell" class="data_table__cell data_table__cell-amount">RTN</div> <div role="gridcell" class="data_table__cell ticker_list__token_name ticker_list__token_name-text_left">Rider Token</div> <div role="gridcell" class="data_table__cell ticker_list__token_name"><a href="https://etherscan.io/address/0x54b293226000ccbfc04df902eec567cb4c35a903" target="_blank" class="ticker_list__ether_scan_link">0x54b293226000c...</a></div> <div role="gridcell" class="data_table__cell ticker_list__token_link"> <!---->  <!----> </div></div><div role="row" class="data_table__row" onclick="location.href='/?token=SANC';"><div role="gridcell" class="data_table__cell ticker_list__favorites"><a class="btn btn-transparent"><img style="width: 15px;" src="assets/img/tokensymbol.png" /></a></div> <div role="gridcell" class="data_table__cell data_table__cell-amount">SANC</div> <div role="gridcell" class="data_table__cell ticker_list__token_name ticker_list__token_name-text_left">SANCOJ</div> <div role="gridcell" class="data_table__cell ticker_list__token_name"><a href="https://etherscan.io/address/0x03ec7bb59be036870ef696a2abf124f496d6735a" target="_blank" class="ticker_list__ether_scan_link">0x03ec7bb59be03...</a></div> <div role="gridcell" class="data_table__cell ticker_list__token_link"> <!---->  <!----> </div></div><div role="row" class="data_table__row" onclick="location.href='/?token=STORJ';"><div role="gridcell" class="data_table__cell ticker_list__favorites"><a class="btn btn-transparent"><img style="width: 15px;" src="assets/img/tokensymbol.png" /></a></div> <div role="gridcell" class="data_table__cell data_table__cell-amount">STORJ</div> <div role="gridcell" class="data_table__cell ticker_list__token_name ticker_list__token_name-text_left">Storj</div> <div role="gridcell" class="data_table__cell ticker_list__token_name"><a href="https://etherscan.io/address/0xb64ef51c888972c908cfacf59b47c1afbc0ab8ac" target="_blank" class="ticker_list__ether_scan_link">0xb64ef51c88897...</a></div> <div role="gridcell" class="data_table__cell ticker_list__token_link"><a href="https://twitter.com/storjproject" target="_blank"> <img src="assets/img/twitter.png"> </a>  <!---->  <!----> <a href="https://storj.io/" target="_blank"> <img src="assets/img/website.png"> </a> </div></div><div role="row" class="data_table__row" onclick="location.href='/?token=STR';"><div role="gridcell" class="data_table__cell ticker_list__favorites"><a class="btn btn-transparent"><img style="width: 15px;" src="assets/img/tokensymbol.png" /></a></div> <div role="gridcell" class="data_table__cell data_table__cell-amount">STR</div> <div role="gridcell" class="data_table__cell ticker_list__token_name ticker_list__token_name-text_left">Staker Token</div> <div role="gridcell" class="data_table__cell ticker_list__token_name"><a href="https://etherscan.io/address/0x426567f78e74577f8a6233b635970eb729631e05" target="_blank" class="ticker_list__ether_scan_link">0x426567f78e745...</a></div> <div role="gridcell" class="data_table__cell ticker_list__token_link"> <!---->  <!----> </div></div><div role="row" class="data_table__row" onclick="location.href='/?token=STX';"><div role="gridcell" class="data_table__cell ticker_list__favorites"><a class="btn btn-transparent"><img style="width: 15px;" src="assets/img/tokensymbol.png" /></a></div> <div role="gridcell" class="data_table__cell data_table__cell-amount">STX</div> <div role="gridcell" class="data_table__cell ticker_list__token_name ticker_list__token_name-text_left">Stox</div> <div role="gridcell" class="data_table__cell ticker_list__token_name"><a href="https://etherscan.io/address/0x006bea43baa3f7a6f765f14f10a1a1b08334ef45" target="_blank" class="ticker_list__ether_scan_link">0x006bea43baa3f...</a></div> <div role="gridcell" class="data_table__cell ticker_list__token_link"> <!---->  <!----> </div></div><div role="row" class="data_table__row" onclick="location.href='/?token=TEN';"><div role="gridcell" class="data_table__cell ticker_list__favorites"><a class="btn btn-transparent"><img style="width: 15px;" src="assets/img/tokensymbol.png" /></a></div> <div role="gridcell" class="data_table__cell data_table__cell-amount">TEN</div> <div role="gridcell" class="data_table__cell ticker_list__token_name ticker_list__token_name-text_left">Tokenomy</div> <div role="gridcell" class="data_table__cell ticker_list__token_name"><a href="https://etherscan.io/address/0xdd16ec0f66e54d453e6756713e533355989040e4" target="_blank" class="ticker_list__ether_scan_link">0xdd16ec0f66e54...</a></div> <div role="gridcell" class="data_table__cell ticker_list__token_link"><a href="https://twitter.com/TokenomyCom" target="_blank"> <img src="assets/img/twitter.png"> </a>  <!----> <a href="https://t.me/tokenomyinfo" target="_blank"> <img src="assets/img/telegram.png"> </a>  <!----> <a href="https://www.tokenomy.com/" target="_blank"> <img src="assets/img/website.png"> </a> </div></div><div role="row" class="data_table__row" onclick="location.href='/?token=THETA';"><div role="gridcell" class="data_table__cell ticker_list__favorites"><a class="btn btn-transparent"><img style="width: 15px;" src="assets/img/tokensymbol.png" /></a></div> <div role="gridcell" class="data_table__cell data_table__cell-amount">THETA</div> <div role="gridcell" class="data_table__cell ticker_list__token_name ticker_list__token_name-text_left">Theta Token</div> <div role="gridcell" class="data_table__cell ticker_list__token_name"><a href="https://etherscan.io/address/0x3883f5e181fccaf8410fa61e12b59bad963fb645" target="_blank" class="ticker_list__ether_scan_link">0x3883f5e181fcc...</a></div> <div role="gridcell" class="data_table__cell ticker_list__token_link"><a href="https://twitter.com/thetatoken" target="_blank"> <img src="assets/img/twitter.png"> </a>  <!----> <a href="https://t.me/joinchat/Gt6mbxJb-2XukwGA_atLjg" target="_blank"> <img src="assets/img/telegram.png"> </a>  <!----> <a href="https://www.thetatoken.org/" target="_blank"> <img src="assets/img/website.png"> </a> </div></div><div role="row" class="data_table__row" onclick="location.href='/?token=TRT2';"><div role="gridcell" class="data_table__cell ticker_list__favorites"><a class="btn btn-transparent"><img style="width: 15px;" src="assets/img/tokensymbol.png" /></a></div> <div role="gridcell" class="data_table__cell data_table__cell-amount">TRT2</div> <div role="gridcell" class="data_table__cell ticker_list__token_name ticker_list__token_name-text_left">Transtoken</div> <div role="gridcell" class="data_table__cell ticker_list__token_name"><a href="https://etherscan.io/address/0xba39536592fbeec37708798140b8fcd12559e314" target="_blank" class="ticker_list__ether_scan_link">0xba39536592fbe...</a></div> <div role="gridcell" class="data_table__cell ticker_list__token_link"> <!---->  <!----> </div></div><div role="row" class="data_table__row" onclick="location.href='/?token=TRXC';"><div role="gridcell" class="data_table__cell ticker_list__favorites"><a class="btn btn-transparent"><img style="width: 15px;" src="assets/img/tokensymbol.png" /></a></div> <div role="gridcell" class="data_table__cell data_table__cell-amount">TRXC</div> <div role="gridcell" class="data_table__cell ticker_list__token_name ticker_list__token_name-text_left">TronClassic</div> <div role="gridcell" class="data_table__cell ticker_list__token_name"><a href="https://etherscan.io/address/0xad5fe5b0b8ec8ff4565204990e4405b2da117d8e" target="_blank" class="ticker_list__ether_scan_link">0xad5fe5b0b8ec8...</a></div> <div role="gridcell" class="data_table__cell ticker_list__token_link"> <!---->  <!----> </div></div><div role="row" class="data_table__row" onclick="location.href='/?token=TSU';"><div role="gridcell" class="data_table__cell ticker_list__favorites"><a class="btn btn-transparent"><img style="width: 15px;" src="assets/img/tokensymbol.png" /></a></div> <div role="gridcell" class="data_table__cell data_table__cell-amount">TSU</div> <div role="gridcell" class="data_table__cell ticker_list__token_name ticker_list__token_name-text_left">Tsunami</div> <div role="gridcell" class="data_table__cell ticker_list__token_name"><a href="https://etherscan.io/address/0x50a7da1bd921ac68d0978c00c1d66637c968159c" target="_blank" class="ticker_list__ether_scan_link">0x50a7da1bd921a...</a></div> <div role="gridcell" class="data_table__cell ticker_list__token_link"> <!---->  <!----> </div></div><div role="row" class="data_table__row" onclick="location.href='/?token=XRT';"><div role="gridcell" class="data_table__cell ticker_list__favorites"><a class="btn btn-transparent"><img style="width: 15px;" src="assets/img/tokensymbol.png" /></a></div> <div role="gridcell" class="data_table__cell data_table__cell-amount">XRT</div> <div role="gridcell" class="data_table__cell ticker_list__token_name ticker_list__token_name-text_left">XRT</div> <div role="gridcell" class="data_table__cell ticker_list__token_name"><a href="https://etherscan.io/address/0x37d404a072056eda0cd10cb714d35552329f8500" target="_blank" class="ticker_list__ether_scan_link">0x37d404a072056...</a></div> <div role="gridcell" class="data_table__cell ticker_list__token_link"> <!---->  <!----> </div></div><div role="row" class="data_table__row" onclick="location.href='/?token=XTO';"><div role="gridcell" class="data_table__cell ticker_list__favorites"><a class="btn btn-transparent"><img style="width: 15px;" src="assets/img/tokensymbol.png" /></a></div> <div role="gridcell" class="data_table__cell data_table__cell-amount">XTO</div> <div role="gridcell" class="data_table__cell ticker_list__token_name ticker_list__token_name-text_left">ExToke</div> <div role="gridcell" class="data_table__cell ticker_list__token_name"><a href="https://etherscan.io/address/0x28925299ee1edd8fd68316eaa64b651456694f0f" target="_blank" class="ticker_list__ether_scan_link">0x28925299ee1ed...</a></div> <div role="gridcell" class="data_table__cell ticker_list__token_link"><a href="https://twitter.com/ex_toke" target="_blank"> <img src="assets/img/twitter.png"> </a>  <!----> <a href="https://t.me/extoke" target="_blank"> <img src="assets/img/telegram.png"> </a>  <!----> <a href="https://extoke.com/" target="_blank"> <img src="assets/img/website.png"> </a> </div></div>                
+              </div>
+       </div>   
+              <!--<button class="btn btn-transparent ticker_list__add_token" data-toggle="modal" data-target=".bs-example-modal-sm"><svg width="14" height="14" viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg" class="icon icon-plus icon-light"><path d="M1600 736v192q0 40-28 68t-68 28h-416v416q0 40-28 68t-68 28h-192q-40 0-68-28t-28-68v-416h-416q-40 0-68-28t-28-68v-192q0-40 28-68t68-28h416v-416q0-40 28-68t68-28h192q40 0 68 28t28 68v416h416q40 0 68 28t28 68z"></path></svg>-->
+              <!--    FREELIST-->
+              <!--</button>-->
+               <button class="btn btn-transparent ticker_list__collapse" onclick="myFunctionsh()"><svg width="8px" height="7px" xmlns="http://www.w3.org/2000/svg" class="icon icon-caret-up icon-warn">
+                <path d="M0.499,6.077 L7.250,6.249 L4.021,0.248 L0.499,6.077 Z"></path>
+              </svg>
+            </button>
+       </div>
+		</div>	
+		<div class="container container-semi_wide container-flex container-divided" style="margin-right: 8px; padding-left: 0; padding-right: 0;margin-left: 8px;">
+		    <div class="col-3 order_book block">
+		        <div role="grid" aria-readonly="true" class="data_table data_table-hover"> 
+		            <div class="data_table__head">
+		                <div role="row" class="data_table__row">
+    		                <div role="gridcell" class="data_table__cell data_table__cell-amount">
+    		                    <span>Price <span class="hidden-sd">(ETH)</span></span>
+    		                </div> 
+        		            <div role="gridcell" class="data_table__cell data_table__cell-amount">
+        		                <span>Amount <span class="hidden-sd">(XTO)</span></span>
+        		            </div>
+        		            <div role="gridcell" class="data_table__cell data_table__cell-amount">
+        		                <span>Total <span class="hidden-sd">(ETH)</span></span>
+        		            </div>
+		                </div>
+		            </div> 
+		  <div class="data_table__body" style="overflow-y:scroll;">
+		    <div class="data_table__row_group order_book__offers" style="height: auto;">
+		    <div style="min-height: 150px;">
+		        </div>
+		                    <div role="row" data-toggle="tooltip" title="Click Here to BUY" class="data_table__row sellOrderBookTakeModal"  id="sellOrderBookTakeModal1"  
+                                data-tradeType="SELL" 
+                                data-tokenAmountTotal="0.0001" 
+                                data-tokenName="XTO" 
+                                data-tokenPriceInEther="20000" 
+                                data-expiryInBlock="6172075" 
+                                data-selectedCurrencyContract="0x28925299ee1edd8fd68316eaa64b651456694f0f" 
+                                data-v="0x1b" 
+                                data-r="0xcd3800bf2ec62c73e2d0d2c44ec15cebff31d31385502838bfffefc537387848" 
+                                data-s="0x50deb4e13bc6d6f892541b34056a55cf6fa216d186b6e2206b2de3e1278737b2" 
+                                data-nonceOrderBook="731006" 
+                                data-tradeMaker="0x62D1289DdB7C3447E3fDe6c7D9372887ef500D79" 
+                                data-feeTakeInContract="0" 
+                                data-etherAmount="2" 
+                                >
+            			        <div role="gridcell" class="data_table__cell data_table__cell-amount"><span class="price_shift price_shift-decreasing">20,000.000</span></div> 
+            			        <div role="gridcell" class="data_table__cell data_table__cell-amount">0.00010000</div> 
+            			        <div role="gridcell" class="data_table__cell data_table__cell-amount">2.00000000</div>
+            			    </div>
+		                    <div role="row" data-toggle="tooltip" title="Click Here to BUY" class="data_table__row sellOrderBookTakeModal"  id="sellOrderBookTakeModal2"  
+                                data-tradeType="SELL" 
+                                data-tokenAmountTotal="1000" 
+                                data-tokenName="XTO" 
+                                data-tokenPriceInEther="1" 
+                                data-expiryInBlock="6173274" 
+                                data-selectedCurrencyContract="0x28925299ee1edd8fd68316eaa64b651456694f0f" 
+                                data-v="0x1c" 
+                                data-r="0x37a37eddf0d5119ed018e1e3c568fba43d6c5f1050887c9785fba4380478a9ca" 
+                                data-s="0x746fb1275fcfd33d7f5db512e7aec6e4134286ae46c3dfe1ee6ccc18b70302d8" 
+                                data-nonceOrderBook="685817" 
+                                data-tradeMaker="0xd6C93A3148140dB082a17C2Bb100E66acaAAEE0b" 
+                                data-feeTakeInContract="0" 
+                                data-etherAmount="1000" 
+                                >
+            			        <div role="gridcell" class="data_table__cell data_table__cell-amount"><span class="price_shift price_shift-decreasing">1.00000000</span></div> 
+            			        <div role="gridcell" class="data_table__cell data_table__cell-amount">1,000.0000</div> 
+            			        <div role="gridcell" class="data_table__cell data_table__cell-amount">1,000.0000</div>
+            			    </div>
+		                    <div role="row" data-toggle="tooltip" title="Click Here to BUY" class="data_table__row sellOrderBookTakeModal"  id="sellOrderBookTakeModal3"  
+                                data-tradeType="SELL" 
+                                data-tokenAmountTotal="10000" 
+                                data-tokenName="XTO" 
+                                data-tokenPriceInEther="0.1" 
+                                data-expiryInBlock="6173282" 
+                                data-selectedCurrencyContract="0x28925299ee1edd8fd68316eaa64b651456694f0f" 
+                                data-v="0x1b" 
+                                data-r="0x8f042287b994e0c3fbd1da09578776b538338cccdef4dfa1e00e7feb3695f7b0" 
+                                data-s="0x6a587cdbcb3f8bca8cf19158c044a6f49c9cb0d467ec8e67e86649b08050fff7" 
+                                data-nonceOrderBook="641684" 
+                                data-tradeMaker="0xd6C93A3148140dB082a17C2Bb100E66acaAAEE0b" 
+                                data-feeTakeInContract="0" 
+                                data-etherAmount="1000" 
+                                >
+            			        <div role="gridcell" class="data_table__cell data_table__cell-amount"><span class="price_shift price_shift-decreasing">0.10000000</span></div> 
+            			        <div role="gridcell" class="data_table__cell data_table__cell-amount">10,000.000</div> 
+            			        <div role="gridcell" class="data_table__cell data_table__cell-amount">1,000.0000</div>
+            			    </div>
+		                    <div role="row" data-toggle="tooltip" title="Click Here to BUY" class="data_table__row sellOrderBookTakeModal"  id="sellOrderBookTakeModal4"  
+                                data-tradeType="SELL" 
+                                data-tokenAmountTotal="2800" 
+                                data-tokenName="XTO" 
+                                data-tokenPriceInEther="0.018" 
+                                data-expiryInBlock="6175019" 
+                                data-selectedCurrencyContract="0x28925299ee1edd8fd68316eaa64b651456694f0f" 
+                                data-v="0x1b" 
+                                data-r="0x48f0c6d1549793870552daccae47b0401864f641bf1b3af01843b3b384fa188a" 
+                                data-s="0x4a7ac1a966952a7819fd852051336cd2ff1c357efffba972d24f908ad52b0d00" 
+                                data-nonceOrderBook="409817" 
+                                data-tradeMaker="0xb5372D530DFB547Adb2e04cbCEa895ceb739B741" 
+                                data-feeTakeInContract="0" 
+                                data-etherAmount="50.4" 
+                                >
+            			        <div role="gridcell" class="data_table__cell data_table__cell-amount"><span class="price_shift price_shift-decreasing">0.01800000</span></div> 
+            			        <div role="gridcell" class="data_table__cell data_table__cell-amount">2,800.0000</div> 
+            			        <div role="gridcell" class="data_table__cell data_table__cell-amount">50.4000000</div>
+            			    </div>
+		                    <div role="row" data-toggle="tooltip" title="Click Here to BUY" class="data_table__row sellOrderBookTakeModal"  id="sellOrderBookTakeModal5"  
+                                data-tradeType="SELL" 
+                                data-tokenAmountTotal="10000" 
+                                data-tokenName="XTO" 
+                                data-tokenPriceInEther="0.01" 
+                                data-expiryInBlock="6175019" 
+                                data-selectedCurrencyContract="0x28925299ee1edd8fd68316eaa64b651456694f0f" 
+                                data-v="0x1b" 
+                                data-r="0xe81135795bec115572f155f03f59a0754a51c3d42f59b0aed74a279747d28826" 
+                                data-s="0x04df87f2dc3b6ab532dc40709849489d98d674060f4e863fc9ab7c0ad298d658" 
+                                data-nonceOrderBook="828853" 
+                                data-tradeMaker="0xb5372D530DFB547Adb2e04cbCEa895ceb739B741" 
+                                data-feeTakeInContract="0" 
+                                data-etherAmount="100" 
+                                >
+            			        <div role="gridcell" class="data_table__cell data_table__cell-amount"><span class="price_shift price_shift-decreasing">0.01000000</span></div> 
+            			        <div role="gridcell" class="data_table__cell data_table__cell-amount">10,000.000</div> 
+            			        <div role="gridcell" class="data_table__cell data_table__cell-amount">100.000000</div>
+            			    </div>
+		                    <div role="row" data-toggle="tooltip" title="Click Here to BUY" class="data_table__row sellOrderBookTakeModal"  id="sellOrderBookTakeModal6"  
+                                data-tradeType="SELL" 
+                                data-tokenAmountTotal="5000" 
+                                data-tokenName="XTO" 
+                                data-tokenPriceInEther="0.001" 
+                                data-expiryInBlock="6168512" 
+                                data-selectedCurrencyContract="0x28925299ee1edd8fd68316eaa64b651456694f0f" 
+                                data-v="0x1b" 
+                                data-r="0xc0559f2b1471652bafe4b0704e54ebb56eb0ca6879cb50b4bcf065e13c0b8194" 
+                                data-s="0x6a2f5f3c6e8da9800b1d02ef8f437a836d50a0cbac014a40902c9c4e45bc4b6b" 
+                                data-nonceOrderBook="359214" 
+                                data-tradeMaker="0xd6C93A3148140dB082a17C2Bb100E66acaAAEE0b" 
+                                data-feeTakeInContract="0" 
+                                data-etherAmount="5" 
+                                >
+            			        <div role="gridcell" class="data_table__cell data_table__cell-amount"><span class="price_shift price_shift-decreasing">0.00100000</span></div> 
+            			        <div role="gridcell" class="data_table__cell data_table__cell-amount">5,000.0000</div> 
+            			        <div role="gridcell" class="data_table__cell data_table__cell-amount">5.00000000</div>
+            			    </div>
+		                    <div role="row" data-toggle="tooltip" title="Click Here to BUY" class="data_table__row sellOrderBookTakeModal"  id="sellOrderBookTakeModal7"  
+                                data-tradeType="SELL" 
+                                data-tokenAmountTotal="100000" 
+                                data-tokenName="XTO" 
+                                data-tokenPriceInEther="0.00012" 
+                                data-expiryInBlock="6170804" 
+                                data-selectedCurrencyContract="0x28925299ee1edd8fd68316eaa64b651456694f0f" 
+                                data-v="0x1b" 
+                                data-r="0x879458491628722f1576194664cee1563e96643b22dccaa788ec14873999a775" 
+                                data-s="0x6bb0cf43cb62f29ff5197d27864e81fc751ef1705b7a341908fdca977611e94e" 
+                                data-nonceOrderBook="699904" 
+                                data-tradeMaker="0x9F163F150d8a625d08711B65a4D3EAc91c4D7Ee3" 
+                                data-feeTakeInContract="0" 
+                                data-etherAmount="12" 
+                                >
+            			        <div role="gridcell" class="data_table__cell data_table__cell-amount"><span class="price_shift price_shift-decreasing">0.00012000</span></div> 
+            			        <div role="gridcell" class="data_table__cell data_table__cell-amount">100,000.00</div> 
+            			        <div role="gridcell" class="data_table__cell data_table__cell-amount">12.0000000</div>
+            			    </div>
+		                    <div role="row" data-toggle="tooltip" title="Click Here to BUY" class="data_table__row sellOrderBookTakeModal"  id="sellOrderBookTakeModal8"  
+                                data-tradeType="SELL" 
+                                data-tokenAmountTotal="100000" 
+                                data-tokenName="XTO" 
+                                data-tokenPriceInEther="0.00011" 
+                                data-expiryInBlock="6170808" 
+                                data-selectedCurrencyContract="0x28925299ee1edd8fd68316eaa64b651456694f0f" 
+                                data-v="0x1c" 
+                                data-r="0x919b38a49cd0a0c8ed733b76f7840a73fda8867323b1d12af228c03c41b6c097" 
+                                data-s="0x1219c78fd1f521873e31c14b246fb5947f656ae84b81e5ff73d1953a494dacae" 
+                                data-nonceOrderBook="908785" 
+                                data-tradeMaker="0x9F163F150d8a625d08711B65a4D3EAc91c4D7Ee3" 
+                                data-feeTakeInContract="0" 
+                                data-etherAmount="11" 
+                                >
+            			        <div role="gridcell" class="data_table__cell data_table__cell-amount"><span class="price_shift price_shift-decreasing">0.00011000</span></div> 
+            			        <div role="gridcell" class="data_table__cell data_table__cell-amount">100,000.00</div> 
+            			        <div role="gridcell" class="data_table__cell data_table__cell-amount">11.0000000</div>
+            			    </div>
+		                    <div role="row" data-toggle="tooltip" title="Click Here to BUY" class="data_table__row sellOrderBookTakeModal"  id="sellOrderBookTakeModal9"  
+                                data-tradeType="SELL" 
+                                data-tokenAmountTotal="5000" 
+                                data-tokenName="XTO" 
+                                data-tokenPriceInEther="0.0001" 
+                                data-expiryInBlock="6173259" 
+                                data-selectedCurrencyContract="0x28925299ee1edd8fd68316eaa64b651456694f0f" 
+                                data-v="0x1c" 
+                                data-r="0x7e43a8e6b86ce6d1595c9b2c09a30b3d676483f4387f0881f59033bdfb812213" 
+                                data-s="0x554dc801289614b27f8d2ccefec2f24d15b7eaa1822777c81166e279f608179b" 
+                                data-nonceOrderBook="56027" 
+                                data-tradeMaker="0xd6C93A3148140dB082a17C2Bb100E66acaAAEE0b" 
+                                data-feeTakeInContract="0" 
+                                data-etherAmount="0.5" 
+                                >
+            			        <div role="gridcell" class="data_table__cell data_table__cell-amount"><span class="price_shift price_shift-decreasing">0.00010000</span></div> 
+            			        <div role="gridcell" class="data_table__cell data_table__cell-amount">5,000.0000</div> 
+            			        <div role="gridcell" class="data_table__cell data_table__cell-amount">0.50000000</div>
+            			    </div>
+		                    <div role="row" data-toggle="tooltip" title="Click Here to BUY" class="data_table__row sellOrderBookTakeModal"  id="sellOrderBookTakeModal10"  
+                                data-tradeType="SELL" 
+                                data-tokenAmountTotal="100000" 
+                                data-tokenName="XTO" 
+                                data-tokenPriceInEther="0.0001" 
+                                data-expiryInBlock="6170809" 
+                                data-selectedCurrencyContract="0x28925299ee1edd8fd68316eaa64b651456694f0f" 
+                                data-v="0x1c" 
+                                data-r="0xb36cc36dfdc065c296073b07319fc3e8934783adfe35b4fd8a2d43b913079a6f" 
+                                data-s="0x56390c4d5c0a4aad74973fa12d72dd3e36d62031ef7dba7d99a486513dbb8b76" 
+                                data-nonceOrderBook="51298" 
+                                data-tradeMaker="0x9F163F150d8a625d08711B65a4D3EAc91c4D7Ee3" 
+                                data-feeTakeInContract="0" 
+                                data-etherAmount="10" 
+                                >
+            			        <div role="gridcell" class="data_table__cell data_table__cell-amount"><span class="price_shift price_shift-decreasing">0.00010000</span></div> 
+            			        <div role="gridcell" class="data_table__cell data_table__cell-amount">100,000.00</div> 
+            			        <div role="gridcell" class="data_table__cell data_table__cell-amount">10.0000000</div>
+            			    </div>
+		                    <div role="row" data-toggle="tooltip" title="Click Here to BUY" class="data_table__row sellOrderBookTakeModal"  id="sellOrderBookTakeModal11"  
+                                data-tradeType="SELL" 
+                                data-tokenAmountTotal="22800" 
+                                data-tokenName="XTO" 
+                                data-tokenPriceInEther="0.00009" 
+                                data-expiryInBlock="6175369" 
+                                data-selectedCurrencyContract="0x28925299ee1edd8fd68316eaa64b651456694f0f" 
+                                data-v="0x1c" 
+                                data-r="0x8bc565e22679f2afe6f0e32b4d3a204b9651e135695140b213336fe844b0c4a3" 
+                                data-s="0x7098facebd0decb7e81829ed7030e6eacb3f28ffea41304d1b9b50493b5172e9" 
+                                data-nonceOrderBook="169647" 
+                                data-tradeMaker="0xb5372D530DFB547Adb2e04cbCEa895ceb739B741" 
+                                data-feeTakeInContract="0" 
+                                data-etherAmount="2.052" 
+                                >
+            			        <div role="gridcell" class="data_table__cell data_table__cell-amount"><span class="price_shift price_shift-decreasing">0.00009000</span></div> 
+            			        <div role="gridcell" class="data_table__cell data_table__cell-amount">22,800.000</div> 
+            			        <div role="gridcell" class="data_table__cell data_table__cell-amount">2.05200000</div>
+            			    </div>
+		                    <div role="row" data-toggle="tooltip" title="Click Here to BUY" class="data_table__row sellOrderBookTakeModal"  id="sellOrderBookTakeModal12"  
+                                data-tradeType="SELL" 
+                                data-tokenAmountTotal="15000" 
+                                data-tokenName="XTO" 
+                                data-tokenPriceInEther="0.00005" 
+                                data-expiryInBlock="6175738" 
+                                data-selectedCurrencyContract="0x28925299ee1edd8fd68316eaa64b651456694f0f" 
+                                data-v="0x1c" 
+                                data-r="0x39d733748553229a51958119b7ec799418424c01c10a8a024b42d24f4d56bf83" 
+                                data-s="0x66a06a8efa75f56cb8f9341cbaec4f759ba52197a6170c26009dcdc257150dc1" 
+                                data-nonceOrderBook="758052" 
+                                data-tradeMaker="0xFC2681E91b4922E10f94aeCF5ACc49b6C29455c2" 
+                                data-feeTakeInContract="0" 
+                                data-etherAmount="0.75" 
+                                >
+            			        <div role="gridcell" class="data_table__cell data_table__cell-amount"><span class="price_shift price_shift-decreasing">0.00005000</span></div> 
+            			        <div role="gridcell" class="data_table__cell data_table__cell-amount">15,000.000</div> 
+            			        <div role="gridcell" class="data_table__cell data_table__cell-amount">0.75000000</div>
+            			    </div>
+		                    <div role="row" data-toggle="tooltip" title="Click Here to BUY" class="data_table__row sellOrderBookTakeModal"  id="sellOrderBookTakeModal13"  
+                                data-tradeType="SELL" 
+                                data-tokenAmountTotal="6600" 
+                                data-tokenName="XTO" 
+                                data-tokenPriceInEther="0.00005" 
+                                data-expiryInBlock="6170686" 
+                                data-selectedCurrencyContract="0x28925299ee1edd8fd68316eaa64b651456694f0f" 
+                                data-v="0x1b" 
+                                data-r="0xb8f696a23ef297ee2aa128ec2f3f16e1b13201bcc82463e379a16aa63c2c54e7" 
+                                data-s="0x2da754fad7f52ce6e302654de9c55092a2cefb94acfc5195c22a3fa8802b00a3" 
+                                data-nonceOrderBook="700772" 
+                                data-tradeMaker="0x67383fC896665ef0b550C0568637fC0aC5F17b0E" 
+                                data-feeTakeInContract="0" 
+                                data-etherAmount="0.33" 
+                                >
+            			        <div role="gridcell" class="data_table__cell data_table__cell-amount"><span class="price_shift price_shift-decreasing">0.00005000</span></div> 
+            			        <div role="gridcell" class="data_table__cell data_table__cell-amount">6,600.0000</div> 
+            			        <div role="gridcell" class="data_table__cell data_table__cell-amount">0.33000000</div>
+            			    </div>
+		                    <div role="row" data-toggle="tooltip" title="Click Here to BUY" class="data_table__row sellOrderBookTakeModal"  id="sellOrderBookTakeModal14"  
+                                data-tradeType="SELL" 
+                                data-tokenAmountTotal="104495" 
+                                data-tokenName="XTO" 
+                                data-tokenPriceInEther="0.00002" 
+                                data-expiryInBlock="6172069" 
+                                data-selectedCurrencyContract="0x28925299ee1edd8fd68316eaa64b651456694f0f" 
+                                data-v="0x1b" 
+                                data-r="0x998a3ef02129db0ee4708be540d856f8a3b31acb2f9ccc8fcb3cc8358ade172d" 
+                                data-s="0x5f674e43038052920882318d5679256418085d24b154dc9e19120fc210370cec" 
+                                data-nonceOrderBook="258869" 
+                                data-tradeMaker="0x62D1289DdB7C3447E3fDe6c7D9372887ef500D79" 
+                                data-feeTakeInContract="0" 
+                                data-etherAmount="2.0899" 
+                                >
+            			        <div role="gridcell" class="data_table__cell data_table__cell-amount"><span class="price_shift price_shift-decreasing">0.00002000</span></div> 
+            			        <div role="gridcell" class="data_table__cell data_table__cell-amount">104,495.00</div> 
+            			        <div role="gridcell" class="data_table__cell data_table__cell-amount">2.08990000</div>
+            			    </div>
+		                    <div role="row" data-toggle="tooltip" title="Click Here to BUY" class="data_table__row sellOrderBookTakeModal"  id="sellOrderBookTakeModal15"  
+                                data-tradeType="SELL" 
+                                data-tokenAmountTotal="200000" 
+                                data-tokenName="XTO" 
+                                data-tokenPriceInEther="0.000005" 
+                                data-expiryInBlock="6172080" 
+                                data-selectedCurrencyContract="0x28925299ee1edd8fd68316eaa64b651456694f0f" 
+                                data-v="0x1c" 
+                                data-r="0xf77096ce316847ec07e0ae40ec890d5772f0569c56c1a79aa8b5cc84981cda9a" 
+                                data-s="0x1ac5bf5f70e118b65f1717e86587d67366a10a48786a1c3e4d52d8e6465a33c3" 
+                                data-nonceOrderBook="156013" 
+                                data-tradeMaker="0x62D1289DdB7C3447E3fDe6c7D9372887ef500D79" 
+                                data-feeTakeInContract="0" 
+                                data-etherAmount="1" 
+                                >
+            			        <div role="gridcell" class="data_table__cell data_table__cell-amount"><span class="price_shift price_shift-decreasing">0.00000500</span></div> 
+            			        <div role="gridcell" class="data_table__cell data_table__cell-amount">200,000.00</div> 
+            			        <div role="gridcell" class="data_table__cell data_table__cell-amount">1.00000000</div>
+            			    </div>
+		                    <div role="row" data-toggle="tooltip" title="Click Here to BUY" class="data_table__row sellOrderBookTakeModal"  id="sellOrderBookTakeModal16"  
+                                data-tradeType="SELL" 
+                                data-tokenAmountTotal="6200" 
+                                data-tokenName="XTO" 
+                                data-tokenPriceInEther="0.000001" 
+                                data-expiryInBlock="6172603" 
+                                data-selectedCurrencyContract="0x28925299ee1edd8fd68316eaa64b651456694f0f" 
+                                data-v="0x1b" 
+                                data-r="0x8bdcd6e2895eabadfef6d8f4b61ef25dee3703975462ddc296f61b00dc4de578" 
+                                data-s="0x65ec815df1fce1c4411d25ee9a9abad9609f0ee73a9ad3ecb6d074905a568993" 
+                                data-nonceOrderBook="617339" 
+                                data-tradeMaker="0xcA5B158b5A36FA40164e6E0E9eA44fB18fab523f" 
+                                data-feeTakeInContract="0" 
+                                data-etherAmount="0.0062" 
+                                >
+            			        <div role="gridcell" class="data_table__cell data_table__cell-amount"><span class="price_shift price_shift-decreasing">0.00000100</span></div> 
+            			        <div role="gridcell" class="data_table__cell data_table__cell-amount">6,200.0000</div> 
+            			        <div role="gridcell" class="data_table__cell data_table__cell-amount">0.00620000</div>
+            			    </div>
+		                    <div role="row" data-toggle="tooltip" title="Click Here to BUY" class="data_table__row sellOrderBookTakeModal"  id="sellOrderBookTakeModal17"  
+                                data-tradeType="SELL" 
+                                data-tokenAmountTotal="179996" 
+                                data-tokenName="XTO" 
+                                data-tokenPriceInEther="0.000001" 
+                                data-expiryInBlock="6171638" 
+                                data-selectedCurrencyContract="0x28925299ee1edd8fd68316eaa64b651456694f0f" 
+                                data-v="0x1b" 
+                                data-r="0xa15fe704de9243eb25ed7f5f6af4c7d78fede004f4678e37849ec8f1e677a729" 
+                                data-s="0x50cb4eda24ec308b79d6213977163c117a8b3e7388e6e522520409cd51b6d092" 
+                                data-nonceOrderBook="378891" 
+                                data-tradeMaker="0x86f78368e5dab67f6CD121BcA336EB7E837Ac83d" 
+                                data-feeTakeInContract="0" 
+                                data-etherAmount="0.179996" 
+                                >
+            			        <div role="gridcell" class="data_table__cell data_table__cell-amount"><span class="price_shift price_shift-decreasing">0.00000100</span></div> 
+            			        <div role="gridcell" class="data_table__cell data_table__cell-amount">179,996.00</div> 
+            			        <div role="gridcell" class="data_table__cell data_table__cell-amount">0.17999600</div>
+            			    </div>
+		                    <div role="row" data-toggle="tooltip" title="Click Here to BUY" class="data_table__row sellOrderBookTakeModal"  id="sellOrderBookTakeModal18"  
+                                data-tradeType="SELL" 
+                                data-tokenAmountTotal="200000" 
+                                data-tokenName="XTO" 
+                                data-tokenPriceInEther="0.0000009" 
+                                data-expiryInBlock="6168353" 
+                                data-selectedCurrencyContract="0x28925299ee1edd8fd68316eaa64b651456694f0f" 
+                                data-v="0x1b" 
+                                data-r="0xcfddd271e3a6a7474660ea0df421ad6c12fa21b0079c0aabee1aae3cbe96d4bd" 
+                                data-s="0x32768912b7f76eeb3b755010743bdeeb51239e413c1289d0bbf2d3f2a3ca0b40" 
+                                data-nonceOrderBook="454550" 
+                                data-tradeMaker="0x8e84036cBd84b08438D48E391638F4d95a891386" 
+                                data-feeTakeInContract="0" 
+                                data-etherAmount="0.18" 
+                                >
+            			        <div role="gridcell" class="data_table__cell data_table__cell-amount"><span class="price_shift price_shift-decreasing">0.00000090</span></div> 
+            			        <div role="gridcell" class="data_table__cell data_table__cell-amount">195,000.00</div> 
+            			        <div role="gridcell" class="data_table__cell data_table__cell-amount">0.17550000</div>
+            			    </div>
+			</div>
+			<div class="order_book__divider" style="position: relative; touch-action: none; left: 0px; top: -26px;">
+	     	<span id="orderBookDeviderID" style="width: 100%; text-align: center; padding: 7px; color:#ead86a;">ORDER BOOK </span>
+        	</div> 
+        	<div class="data_table__row_group">
+        	    <div style="min-height: 165px;">
+        	        <div role="row" data-toggle="tooltip" title="Click Here to SELL" class="data_table__row  buyOrderBookTakeModal"  id="buyOrderBookTakeModal1"  
+                                data-tradeType="BUY" 
+                                data-tokenAmountTotal="1000" 
+                                data-tokenName="XTO" 
+                                data-tokenPriceInEther="0.000001" 
+                                data-expiryInBlock="6172255" 
+                                data-selectedCurrencyContract="0x28925299ee1edd8fd68316eaa64b651456694f0f" 
+                                data-v="0x1b" 
+                                data-r="0x715030dcff7bff165dd3ff59dbb5a858bf04416f7848bd63b4fa8dfdd6c97521" 
+                                data-s="0x23cfe5ea3821aac53df103169bf4d156a9e077e847afb997ae7ae4a4f359c952" 
+                                data-nonceOrderBook="808466" 
+                                data-tradeMaker="0x99beD0f6f2e0ef7a13bfD61F08fbAA041f554491" 
+                                data-feeTakeInContract="0" 
+                                data-etherAmount="0.001" 
+                                >
+        	            <div role="gridcell" class="data_table__cell data_table__cell-amount"><span class="price_shift price_shift-increasing"> 0.00000100</span></div> 
+        	            <div role="gridcell" class="data_table__cell data_table__cell-amount">1,000.0000</div> 
+        	            <div role="gridcell" class="data_table__cell data_table__cell-amount">0.00100000</div>
+        	        </div>
+        	        <div role="row" data-toggle="tooltip" title="Click Here to SELL" class="data_table__row  buyOrderBookTakeModal"  id="buyOrderBookTakeModal2"  
+                                data-tradeType="BUY" 
+                                data-tokenAmountTotal="500" 
+                                data-tokenName="XTO" 
+                                data-tokenPriceInEther="0.0000009" 
+                                data-expiryInBlock="6170815" 
+                                data-selectedCurrencyContract="0x28925299ee1edd8fd68316eaa64b651456694f0f" 
+                                data-v="0x1c" 
+                                data-r="0xcd8b4544e6368dab0c7fda5defad0fdac535fe7a3937e108b668958db777c9b8" 
+                                data-s="0x5ebf54ea82b15f981cba4ecf66864c3dfdc06c1397b6ab50246d8c5f41e08a69" 
+                                data-nonceOrderBook="25375" 
+                                data-tradeMaker="0xd6C93A3148140dB082a17C2Bb100E66acaAAEE0b" 
+                                data-feeTakeInContract="0" 
+                                data-etherAmount="0.00045" 
+                                >
+        	            <div role="gridcell" class="data_table__cell data_table__cell-amount"><span class="price_shift price_shift-increasing"> 0.00000090</span></div> 
+        	            <div role="gridcell" class="data_table__cell data_table__cell-amount">500.000000</div> 
+        	            <div role="gridcell" class="data_table__cell data_table__cell-amount">0.00045000</div>
+        	        </div>
+        	        <div role="row" data-toggle="tooltip" title="Click Here to SELL" class="data_table__row  buyOrderBookTakeModal"  id="buyOrderBookTakeModal3"  
+                                data-tradeType="BUY" 
+                                data-tokenAmountTotal="1800" 
+                                data-tokenName="XTO" 
+                                data-tokenPriceInEther="0.0000006" 
+                                data-expiryInBlock="6166568" 
+                                data-selectedCurrencyContract="0x28925299ee1edd8fd68316eaa64b651456694f0f" 
+                                data-v="0x1c" 
+                                data-r="0x1b2ea1d9a64aa92c0693cdb2c683234fd15a430a48b25c7aa3b9fc848ad6e6b5" 
+                                data-s="0x460f85e70ed38e3fa56771ae5232ae69347d269600b82711c47b23b7c8a079ad" 
+                                data-nonceOrderBook="991978" 
+                                data-tradeMaker="0xb5372D530DFB547Adb2e04cbCEa895ceb739B741" 
+                                data-feeTakeInContract="0" 
+                                data-etherAmount="0.00108" 
+                                >
+        	            <div role="gridcell" class="data_table__cell data_table__cell-amount"><span class="price_shift price_shift-increasing"> 0.00000060</span></div> 
+        	            <div role="gridcell" class="data_table__cell data_table__cell-amount">1,800.0000</div> 
+        	            <div role="gridcell" class="data_table__cell data_table__cell-amount">0.00108000</div>
+        	        </div>
+        	        <div role="row" data-toggle="tooltip" title="Click Here to SELL" class="data_table__row  buyOrderBookTakeModal"  id="buyOrderBookTakeModal4"  
+                                data-tradeType="BUY" 
+                                data-tokenAmountTotal="1800" 
+                                data-tokenName="XTO" 
+                                data-tokenPriceInEther="0.0000006" 
+                                data-expiryInBlock="6166583" 
+                                data-selectedCurrencyContract="0x28925299ee1edd8fd68316eaa64b651456694f0f" 
+                                data-v="0x1c" 
+                                data-r="0x18a12341456723306992247984a5ea08dee612e5a4830e12b8f1b4db426647c4" 
+                                data-s="0x7a4d8aaaffb1440a62f093ccdabcd60fdddd1e75ba91dcb56948dbdce0e7bebc" 
+                                data-nonceOrderBook="265702" 
+                                data-tradeMaker="0xb5372D530DFB547Adb2e04cbCEa895ceb739B741" 
+                                data-feeTakeInContract="0" 
+                                data-etherAmount="0.00108" 
+                                >
+        	            <div role="gridcell" class="data_table__cell data_table__cell-amount"><span class="price_shift price_shift-increasing"> 0.00000060</span></div> 
+        	            <div role="gridcell" class="data_table__cell data_table__cell-amount">1,800.0000</div> 
+        	            <div role="gridcell" class="data_table__cell data_table__cell-amount">0.00108000</div>
+        	        </div>
+        	                    <script>
+                    			    var orderBookDeiverVariable = document.getElementById("orderBookDeviderID");
+                    			    orderBookDeiverVariable.scrollIntoView();
+                    			</script>    
+        	        <div role="row" data-toggle="tooltip" title="Click Here to SELL" class="data_table__row  buyOrderBookTakeModal"  id="buyOrderBookTakeModal5"  
+                                data-tradeType="BUY" 
+                                data-tokenAmountTotal="1800" 
+                                data-tokenName="XTO" 
+                                data-tokenPriceInEther="0.0000006" 
+                                data-expiryInBlock="6166583" 
+                                data-selectedCurrencyContract="0x28925299ee1edd8fd68316eaa64b651456694f0f" 
+                                data-v="0x1b" 
+                                data-r="0x44bd6ff274098ba0b375e98ab31016e3e679cc4523d177e56a48bfb9402799be" 
+                                data-s="0x3e2a3632666277a2ebbd5a0abe9dcdca0b87a4b1c98e15f2d5feefc868a532d6" 
+                                data-nonceOrderBook="706278" 
+                                data-tradeMaker="0xb5372D530DFB547Adb2e04cbCEa895ceb739B741" 
+                                data-feeTakeInContract="0" 
+                                data-etherAmount="0.00108" 
+                                >
+        	            <div role="gridcell" class="data_table__cell data_table__cell-amount"><span class="price_shift price_shift-increasing"> 0.00000060</span></div> 
+        	            <div role="gridcell" class="data_table__cell data_table__cell-amount">1,800.0000</div> 
+        	            <div role="gridcell" class="data_table__cell data_table__cell-amount">0.00108000</div>
+        	        </div>
+        	        <div role="row" data-toggle="tooltip" title="Click Here to SELL" class="data_table__row  buyOrderBookTakeModal"  id="buyOrderBookTakeModal6"  
+                                data-tradeType="BUY" 
+                                data-tokenAmountTotal="1800" 
+                                data-tokenName="XTO" 
+                                data-tokenPriceInEther="0.0000006" 
+                                data-expiryInBlock="6166583" 
+                                data-selectedCurrencyContract="0x28925299ee1edd8fd68316eaa64b651456694f0f" 
+                                data-v="0x1c" 
+                                data-r="0x069c926370c9931d364160d4ab578db5132e3301a4fa090c211284e339fff349" 
+                                data-s="0x37e11e2495e7e6c4c90ac51b5ebbf28f63095bd2a74163acd5526dfafa574c41" 
+                                data-nonceOrderBook="605443" 
+                                data-tradeMaker="0xb5372D530DFB547Adb2e04cbCEa895ceb739B741" 
+                                data-feeTakeInContract="0" 
+                                data-etherAmount="0.00108" 
+                                >
+        	            <div role="gridcell" class="data_table__cell data_table__cell-amount"><span class="price_shift price_shift-increasing"> 0.00000060</span></div> 
+        	            <div role="gridcell" class="data_table__cell data_table__cell-amount">1,800.0000</div> 
+        	            <div role="gridcell" class="data_table__cell data_table__cell-amount">0.00108000</div>
+        	        </div>
+        	        <div role="row" data-toggle="tooltip" title="Click Here to SELL" class="data_table__row  buyOrderBookTakeModal"  id="buyOrderBookTakeModal7"  
+                                data-tradeType="BUY" 
+                                data-tokenAmountTotal="1800" 
+                                data-tokenName="XTO" 
+                                data-tokenPriceInEther="0.0000006" 
+                                data-expiryInBlock="6166583" 
+                                data-selectedCurrencyContract="0x28925299ee1edd8fd68316eaa64b651456694f0f" 
+                                data-v="0x1b" 
+                                data-r="0xe3027b49fbfc15757e3d984e3c129260be38f74f9635313d5599a09423ff801a" 
+                                data-s="0x537091013131c9fa0560e07088f5819d0336dacff3ccfc25e46f92ec702dde5f" 
+                                data-nonceOrderBook="277412" 
+                                data-tradeMaker="0xb5372D530DFB547Adb2e04cbCEa895ceb739B741" 
+                                data-feeTakeInContract="0" 
+                                data-etherAmount="0.00108" 
+                                >
+        	            <div role="gridcell" class="data_table__cell data_table__cell-amount"><span class="price_shift price_shift-increasing"> 0.00000060</span></div> 
+        	            <div role="gridcell" class="data_table__cell data_table__cell-amount">1,800.0000</div> 
+        	            <div role="gridcell" class="data_table__cell data_table__cell-amount">0.00108000</div>
+        	        </div>
+        	        <div role="row" data-toggle="tooltip" title="Click Here to SELL" class="data_table__row  buyOrderBookTakeModal"  id="buyOrderBookTakeModal8"  
+                                data-tradeType="BUY" 
+                                data-tokenAmountTotal="1800" 
+                                data-tokenName="XTO" 
+                                data-tokenPriceInEther="0.0000006" 
+                                data-expiryInBlock="6166583" 
+                                data-selectedCurrencyContract="0x28925299ee1edd8fd68316eaa64b651456694f0f" 
+                                data-v="0x1b" 
+                                data-r="0x011e457737b3504583c5d4a224155051f1819a00cddc866605993477e28f9247" 
+                                data-s="0x499e71a06eb4baf4075c5dbeb165d3af6215ba8e82c608e62cd2a80db1fb4b31" 
+                                data-nonceOrderBook="174769" 
+                                data-tradeMaker="0xb5372D530DFB547Adb2e04cbCEa895ceb739B741" 
+                                data-feeTakeInContract="0" 
+                                data-etherAmount="0.00108" 
+                                >
+        	            <div role="gridcell" class="data_table__cell data_table__cell-amount"><span class="price_shift price_shift-increasing"> 0.00000060</span></div> 
+        	            <div role="gridcell" class="data_table__cell data_table__cell-amount">1,800.0000</div> 
+        	            <div role="gridcell" class="data_table__cell data_table__cell-amount">0.00108000</div>
+        	        </div>
+        	        <div role="row" data-toggle="tooltip" title="Click Here to SELL" class="data_table__row  buyOrderBookTakeModal"  id="buyOrderBookTakeModal9"  
+                                data-tradeType="BUY" 
+                                data-tokenAmountTotal="1800" 
+                                data-tokenName="XTO" 
+                                data-tokenPriceInEther="0.0000006" 
+                                data-expiryInBlock="6166583" 
+                                data-selectedCurrencyContract="0x28925299ee1edd8fd68316eaa64b651456694f0f" 
+                                data-v="0x1c" 
+                                data-r="0xe429e34157824a99c764de1939f0c67be718ecd65dc557b9a6363c85470eedfe" 
+                                data-s="0x36b950f100b994377f07c84dc2d81902c20a9d300b4f810e525ee5aeaea128a8" 
+                                data-nonceOrderBook="648292" 
+                                data-tradeMaker="0xb5372D530DFB547Adb2e04cbCEa895ceb739B741" 
+                                data-feeTakeInContract="0" 
+                                data-etherAmount="0.00108" 
+                                >
+        	            <div role="gridcell" class="data_table__cell data_table__cell-amount"><span class="price_shift price_shift-increasing"> 0.00000060</span></div> 
+        	            <div role="gridcell" class="data_table__cell data_table__cell-amount">1,800.0000</div> 
+        	            <div role="gridcell" class="data_table__cell data_table__cell-amount">0.00108000</div>
+        	        </div>
+        	        <div role="row" data-toggle="tooltip" title="Click Here to SELL" class="data_table__row  buyOrderBookTakeModal"  id="buyOrderBookTakeModal10"  
+                                data-tradeType="BUY" 
+                                data-tokenAmountTotal="1800" 
+                                data-tokenName="XTO" 
+                                data-tokenPriceInEther="0.0000006" 
+                                data-expiryInBlock="6166583" 
+                                data-selectedCurrencyContract="0x28925299ee1edd8fd68316eaa64b651456694f0f" 
+                                data-v="0x1c" 
+                                data-r="0x36040e38e56863f3cdedc41a53a577757e6f15bc80b0d10e509371798bf4223e" 
+                                data-s="0x17f52b281a4f7660b4d963d03f21aa260946b139d0db2f50595fdad0f8a556f0" 
+                                data-nonceOrderBook="255358" 
+                                data-tradeMaker="0xb5372D530DFB547Adb2e04cbCEa895ceb739B741" 
+                                data-feeTakeInContract="0" 
+                                data-etherAmount="0.00108" 
+                                >
+        	            <div role="gridcell" class="data_table__cell data_table__cell-amount"><span class="price_shift price_shift-increasing"> 0.00000060</span></div> 
+        	            <div role="gridcell" class="data_table__cell data_table__cell-amount">1,800.0000</div> 
+        	            <div role="gridcell" class="data_table__cell data_table__cell-amount">0.00108000</div>
+        	        </div>
+        	        <div role="row" data-toggle="tooltip" title="Click Here to SELL" class="data_table__row  buyOrderBookTakeModal"  id="buyOrderBookTakeModal11"  
+                                data-tradeType="BUY" 
+                                data-tokenAmountTotal="1800" 
+                                data-tokenName="XTO" 
+                                data-tokenPriceInEther="0.0000006" 
+                                data-expiryInBlock="6166583" 
+                                data-selectedCurrencyContract="0x28925299ee1edd8fd68316eaa64b651456694f0f" 
+                                data-v="0x1b" 
+                                data-r="0xd4ae9d2bfb4b07c8bb79ce96cab72b9bd78f8ae0d2dd20f09366f5bb5ca5588e" 
+                                data-s="0x12899f25811aa5f61ed6c608e889321395a0dcb0394cf31fa4d19443c953119c" 
+                                data-nonceOrderBook="51890" 
+                                data-tradeMaker="0xb5372D530DFB547Adb2e04cbCEa895ceb739B741" 
+                                data-feeTakeInContract="0" 
+                                data-etherAmount="0.00108" 
+                                >
+        	            <div role="gridcell" class="data_table__cell data_table__cell-amount"><span class="price_shift price_shift-increasing"> 0.00000060</span></div> 
+        	            <div role="gridcell" class="data_table__cell data_table__cell-amount">1,800.0000</div> 
+        	            <div role="gridcell" class="data_table__cell data_table__cell-amount">0.00108000</div>
+        	        </div>
+        	        <div role="row" data-toggle="tooltip" title="Click Here to SELL" class="data_table__row  buyOrderBookTakeModal"  id="buyOrderBookTakeModal12"  
+                                data-tradeType="BUY" 
+                                data-tokenAmountTotal="1800" 
+                                data-tokenName="XTO" 
+                                data-tokenPriceInEther="0.0000006" 
+                                data-expiryInBlock="6166583" 
+                                data-selectedCurrencyContract="0x28925299ee1edd8fd68316eaa64b651456694f0f" 
+                                data-v="0x1b" 
+                                data-r="0xec185639d750051441880dccc956d2a7dedbcd69caf944795facd7797ba83579" 
+                                data-s="0x3e375a491314244a5aae276c13ba311ea1ebd3defbec886498dac673233d280e" 
+                                data-nonceOrderBook="909360" 
+                                data-tradeMaker="0xb5372D530DFB547Adb2e04cbCEa895ceb739B741" 
+                                data-feeTakeInContract="0" 
+                                data-etherAmount="0.00108" 
+                                >
+        	            <div role="gridcell" class="data_table__cell data_table__cell-amount"><span class="price_shift price_shift-increasing"> 0.00000060</span></div> 
+        	            <div role="gridcell" class="data_table__cell data_table__cell-amount">1,800.0000</div> 
+        	            <div role="gridcell" class="data_table__cell data_table__cell-amount">0.00108000</div>
+        	        </div>
+        	        <div role="row" data-toggle="tooltip" title="Click Here to SELL" class="data_table__row  buyOrderBookTakeModal"  id="buyOrderBookTakeModal13"  
+                                data-tradeType="BUY" 
+                                data-tokenAmountTotal="92000" 
+                                data-tokenName="XTO" 
+                                data-tokenPriceInEther="0.0000005" 
+                                data-expiryInBlock="6174335" 
+                                data-selectedCurrencyContract="0x28925299ee1edd8fd68316eaa64b651456694f0f" 
+                                data-v="0x1c" 
+                                data-r="0xc193eb1742cfed0754d6d2fecf89a1b38acee3095ba0aa2959093f90f9cf9780" 
+                                data-s="0x5bcfa0d7a69affcd6e7b6b04e797f662e04f78d65a610a8c91e6408d21ea9dcd" 
+                                data-nonceOrderBook="483656" 
+                                data-tradeMaker="0xb5372D530DFB547Adb2e04cbCEa895ceb739B741" 
+                                data-feeTakeInContract="0" 
+                                data-etherAmount="0.046" 
+                                >
+        	            <div role="gridcell" class="data_table__cell data_table__cell-amount"><span class="price_shift price_shift-increasing"> 0.00000050</span></div> 
+        	            <div role="gridcell" class="data_table__cell data_table__cell-amount">92,000.000</div> 
+        	            <div role="gridcell" class="data_table__cell data_table__cell-amount">0.04600000</div>
+        	        </div>
+        	        <div role="row" data-toggle="tooltip" title="Click Here to SELL" class="data_table__row  buyOrderBookTakeModal"  id="buyOrderBookTakeModal14"  
+                                data-tradeType="BUY" 
+                                data-tokenAmountTotal="92000" 
+                                data-tokenName="XTO" 
+                                data-tokenPriceInEther="0.0000005" 
+                                data-expiryInBlock="6174335" 
+                                data-selectedCurrencyContract="0x28925299ee1edd8fd68316eaa64b651456694f0f" 
+                                data-v="0x1c" 
+                                data-r="0x2c12ca4422eb9b1113e9a1ad7709eb87967eb877d6c479989a027d015e8a7c52" 
+                                data-s="0x2a39126e424cf4040061630c4bfc1445b34ae3bccf29ee96d9a0cc5e4e16940c" 
+                                data-nonceOrderBook="588242" 
+                                data-tradeMaker="0xb5372D530DFB547Adb2e04cbCEa895ceb739B741" 
+                                data-feeTakeInContract="0" 
+                                data-etherAmount="0.046" 
+                                >
+        	            <div role="gridcell" class="data_table__cell data_table__cell-amount"><span class="price_shift price_shift-increasing"> 0.00000050</span></div> 
+        	            <div role="gridcell" class="data_table__cell data_table__cell-amount">92,000.000</div> 
+        	            <div role="gridcell" class="data_table__cell data_table__cell-amount">0.04600000</div>
+        	        </div>
+        	        <div role="row" data-toggle="tooltip" title="Click Here to SELL" class="data_table__row  buyOrderBookTakeModal"  id="buyOrderBookTakeModal15"  
+                                data-tradeType="BUY" 
+                                data-tokenAmountTotal="92000" 
+                                data-tokenName="XTO" 
+                                data-tokenPriceInEther="0.0000005" 
+                                data-expiryInBlock="6174335" 
+                                data-selectedCurrencyContract="0x28925299ee1edd8fd68316eaa64b651456694f0f" 
+                                data-v="0x1b" 
+                                data-r="0x6e8d68bfcd651ed94b6cdeed95b4356c17b56d8fbed61b5461b3df3fa23a8712" 
+                                data-s="0x4997beba1e788d5ec704cb3c78612cd5bf9b25a6bd8d36727c6c6b3abb59c46c" 
+                                data-nonceOrderBook="164637" 
+                                data-tradeMaker="0xb5372D530DFB547Adb2e04cbCEa895ceb739B741" 
+                                data-feeTakeInContract="0" 
+                                data-etherAmount="0.046" 
+                                >
+        	            <div role="gridcell" class="data_table__cell data_table__cell-amount"><span class="price_shift price_shift-increasing"> 0.00000050</span></div> 
+        	            <div role="gridcell" class="data_table__cell data_table__cell-amount">92,000.000</div> 
+        	            <div role="gridcell" class="data_table__cell data_table__cell-amount">0.04600000</div>
+        	        </div>
+        	        <div role="row" data-toggle="tooltip" title="Click Here to SELL" class="data_table__row  buyOrderBookTakeModal"  id="buyOrderBookTakeModal16"  
+                                data-tradeType="BUY" 
+                                data-tokenAmountTotal="10000" 
+                                data-tokenName="XTO" 
+                                data-tokenPriceInEther="0.000000005" 
+                                data-expiryInBlock="6168505" 
+                                data-selectedCurrencyContract="0x28925299ee1edd8fd68316eaa64b651456694f0f" 
+                                data-v="0x1b" 
+                                data-r="0x624dc719186aa317bdc15003ab883621ef7b14d1396986f3b3a2ba9730ef4885" 
+                                data-s="0x5bab611fceb7e0da3b7a8f0fa18e87841405a2edaab0f9b7f0e1f88b8924e149" 
+                                data-nonceOrderBook="593102" 
+                                data-tradeMaker="0xd6C93A3148140dB082a17C2Bb100E66acaAAEE0b" 
+                                data-feeTakeInContract="0" 
+                                data-etherAmount="0.00005" 
+                                >
+        	            <div role="gridcell" class="data_table__cell data_table__cell-amount"><span class="price_shift price_shift-increasing"> 0.00000001</span></div> 
+        	            <div role="gridcell" class="data_table__cell data_table__cell-amount">10,000.000</div> 
+        	            <div role="gridcell" class="data_table__cell data_table__cell-amount">0.00005000</div>
+        	        </div>
+			</div>
+			<!----> <!---->
+			</div></div></div></div> <!----> 
+			<div id="myDIV2" class="col-3 trade_history block sq-prices">
+			    <div role="grid" aria-readonly="true" class="data_table">
+			     <div class="data_table__head"><div role="row" class="data_table__row">
+			         <div role="gridcell" class="data_table__cell data_table__cell-date">Time</div> 
+			         <div role="gridcell" class="data_table__cell data_table__cell-amount"><span>Price <span class="hidden-sd">(ETH)</span></span></div> 
+			         <div role="gridcell" class="data_table__cell data_table__cell-amount"><span>Amount <span class="hidden-sd">(XTO)</span></span></div></div></div> 
+			         <div class="data_table__body">
+			             <div role="row" class="data_table__row">
+			                 <div role="gridcell" class="data_table__cell data_table__cell-date">
+			                     <a href="https://etherscan.io/tx/0x94adf6a8cce202cda03ab3615bf786d69f231170577ecd24b570c9f68da8928e" target="_blank" class="trade_history__href">08/16 10:32</a></div>
+			                     <div role="gridcell" class="data_table__cell data_table__cell-amount"><span class="price_shift price_shift-increasing" >0.00000090</span></div> 
+			                     <div role="gridcell" class="data_table__cell data_table__cell-amount">5,000.0000</div>
+			             </div>
+			             <div role="row" class="data_table__row">
+			                 <div role="gridcell" class="data_table__cell data_table__cell-date">
+			                     <a href="https://etherscan.io/tx/0x6df9669d1e5dffe8438f8902e8e9145b0b61b2e7d9a880960d487da80a521843" target="_blank" class="trade_history__href">08/16 10:31</a></div>
+			                     <div role="gridcell" class="data_table__cell data_table__cell-amount"><span class="price_shift price_shift-increasing" >0.00000100</span></div> 
+			                     <div role="gridcell" class="data_table__cell data_table__cell-amount">4,000.0000</div>
+			             </div>
+			             <div role="row" class="data_table__row">
+			                 <div role="gridcell" class="data_table__cell data_table__cell-date">
+			                     <a href="https://etherscan.io/tx/0x9b663d998a7a6a344aa073dfae328943181b4be87f93c5249c22fe701cd810f3" target="_blank" class="trade_history__href">08/15 02:37</a></div>
+			                     <div role="gridcell" class="data_table__cell data_table__cell-amount"><span class="price_shift price_shift-increasing" style='color:#ff5d5d'>0.00000060</span></div> 
+			                     <div role="gridcell" class="data_table__cell data_table__cell-amount">20,000.000</div>
+			             </div>
+			             <div role="row" class="data_table__row">
+			                 <div role="gridcell" class="data_table__cell data_table__cell-date">
+			                     <a href="https://etherscan.io/tx/0xcfa9fa723f3d9572d033738b5d513c52d65ff8be5086a152e064b3e194a38af4" target="_blank" class="trade_history__href">08/15 09:02</a></div>
+			                     <div role="gridcell" class="data_table__cell data_table__cell-amount"><span class="price_shift price_shift-increasing" style='color:#ff5d5d'>0.00000055</span></div> 
+			                     <div role="gridcell" class="data_table__cell data_table__cell-amount">90,000.000</div>
+			             </div>
+			             <div role="row" class="data_table__row">
+			                 <div role="gridcell" class="data_table__cell data_table__cell-date">
+			                     <a href="https://etherscan.io/tx/0xe5b969c53c115687c1a97bd2b18a12e1deb7c3f2ccd4cc8aa8c8c30ac38b0743" target="_blank" class="trade_history__href">08/15 09:01</a></div>
+			                     <div role="gridcell" class="data_table__cell data_table__cell-amount"><span class="price_shift price_shift-increasing" style='color:#ff5d5d'>0.00000062</span></div> 
+			                     <div role="gridcell" class="data_table__cell data_table__cell-amount">20,000.000</div>
+			             </div>
+			             <div role="row" class="data_table__row">
+			                 <div role="gridcell" class="data_table__cell data_table__cell-date">
+			                     <a href="https://etherscan.io/tx/0x5699d334ebeaa501a1608caf66d833ba2b73e21687ab51c78155360d8712821f" target="_blank" class="trade_history__href">08/15 08:47</a></div>
+			                     <div role="gridcell" class="data_table__cell data_table__cell-amount"><span class="price_shift price_shift-increasing" style='color:#ff5d5d'>0.00000072</span></div> 
+			                     <div role="gridcell" class="data_table__cell data_table__cell-amount">95,500.000</div>
+			             </div>
+			             <div role="row" class="data_table__row">
+			                 <div role="gridcell" class="data_table__cell data_table__cell-date">
+			                     <a href="https://etherscan.io/tx/0xcd0c607fe1cfe021b0630e8675a0e614808b914ee81dee6e04175d3173f13f6a" target="_blank" class="trade_history__href">08/15 06:35</a></div>
+			                     <div role="gridcell" class="data_table__cell data_table__cell-amount"><span class="price_shift price_shift-increasing" style='color:#ff5d5d'>0.00000072</span></div> 
+			                     <div role="gridcell" class="data_table__cell data_table__cell-amount">95,500.000</div>
+			             </div>
+			             <div role="row" class="data_table__row">
+			                 <div role="gridcell" class="data_table__cell data_table__cell-date">
+			                     <a href="https://etherscan.io/tx/0x04926de3aa2e17bbd1c60a46dade85e79b550433e0f3031e51a096d3a61d5a41" target="_blank" class="trade_history__href">08/15 05:39</a></div>
+			                     <div role="gridcell" class="data_table__cell data_table__cell-amount"><span class="price_shift price_shift-increasing" style='color:#ff5d5d'>0.00000072</span></div> 
+			                     <div role="gridcell" class="data_table__cell data_table__cell-amount">100.000000</div>
+			             </div>
+			             <div role="row" class="data_table__row">
+			                 <div role="gridcell" class="data_table__cell data_table__cell-date">
+			                     <a href="https://etherscan.io/tx/0x819bf370da655a1891d4be9bc31d0e0e4ba92c74b80878b40fad11586034323c" target="_blank" class="trade_history__href">08/15 04:11</a></div>
+			                     <div role="gridcell" class="data_table__cell data_table__cell-amount"><span class="price_shift price_shift-increasing" >0.00000060</span></div> 
+			                     <div role="gridcell" class="data_table__cell data_table__cell-amount">26,700.000</div>
+			             </div>
+			             <div role="row" class="data_table__row">
+			                 <div role="gridcell" class="data_table__cell data_table__cell-date">
+			                     <a href="https://etherscan.io/tx/0xede295d41bac57bf3acfd84d7de5247879119944382a74bdc0d84577916168b6" target="_blank" class="trade_history__href">08/14 06:11</a></div>
+			                     <div role="gridcell" class="data_table__cell data_table__cell-amount"><span class="price_shift price_shift-increasing" >0.00000060</span></div> 
+			                     <div role="gridcell" class="data_table__cell data_table__cell-amount">23,300.000</div>
+			             </div>
+			             <div role="row" class="data_table__row">
+			                 <div role="gridcell" class="data_table__cell data_table__cell-date">
+			                     <a href="https://etherscan.io/tx/0xa8ce9d694e1df0e5c0ca3707762e232f23be777c8c594885a19e3cc319fc6a4c" target="_blank" class="trade_history__href">08/13 02:53</a></div>
+			                     <div role="gridcell" class="data_table__cell data_table__cell-amount"><span class="price_shift price_shift-increasing" style='color:#ff5d5d'>0.00000050</span></div> 
+			                     <div role="gridcell" class="data_table__cell data_table__cell-amount">3,000.0000</div>
+			             </div>
+			             <div role="row" class="data_table__row">
+			                 <div role="gridcell" class="data_table__cell data_table__cell-date">
+			                     <a href="https://etherscan.io/tx/0xca8be456dadd25f5437ee7969503656f77af8d51b112e1f0460b635dce9b21ec" target="_blank" class="trade_history__href">08/13 08:41</a></div>
+			                     <div role="gridcell" class="data_table__cell data_table__cell-amount"><span class="price_shift price_shift-increasing" style='color:#ff5d5d'>0.00000001</span></div> 
+			                     <div role="gridcell" class="data_table__cell data_table__cell-amount">1.00000000</div>
+			             </div>
+			             <div role="row" class="data_table__row">
+			                 <div role="gridcell" class="data_table__cell data_table__cell-date">
+			                     <a href="https://etherscan.io/tx/0x16946efc71dd68b1ebfccf038698cf10ad29a5e84212c4596377120dc0324616" target="_blank" class="trade_history__href">08/13 04:55</a></div>
+			                     <div role="gridcell" class="data_table__cell data_table__cell-amount"><span class="price_shift price_shift-increasing" style='color:#ff5d5d'>0.00000020</span></div> 
+			                     <div role="gridcell" class="data_table__cell data_table__cell-amount">29,999.000</div>
+			             </div>
+			             <div role="row" class="data_table__row">
+			                 <div role="gridcell" class="data_table__cell data_table__cell-date">
+			                     <a href="https://etherscan.io/tx/0xcd685d95305e269a4a936f0b364f3bc1e647c2268ee9a0351ff5bbf56fd5e222" target="_blank" class="trade_history__href">08/13 04:54</a></div>
+			                     <div role="gridcell" class="data_table__cell data_table__cell-amount"><span class="price_shift price_shift-increasing" style='color:#ff5d5d'>0.00000021</span></div> 
+			                     <div role="gridcell" class="data_table__cell data_table__cell-amount">50,000.000</div>
+			             </div>
+			             <div role="row" class="data_table__row">
+			                 <div role="gridcell" class="data_table__cell data_table__cell-date">
+			                     <a href="https://etherscan.io/tx/0xcf73b1e221a6a7697c0f6cf8400e3dbf034a7ce4e42dc1194628d7b28793fb26" target="_blank" class="trade_history__href">08/13 04:50</a></div>
+			                     <div role="gridcell" class="data_table__cell data_table__cell-amount"><span class="price_shift price_shift-increasing" style='color:#ff5d5d'>0.00000030</span></div> 
+			                     <div role="gridcell" class="data_table__cell data_table__cell-amount">20,000.000</div>
+			             </div>
+			             <div role="row" class="data_table__row">
+			                 <div role="gridcell" class="data_table__cell data_table__cell-date">
+			                     <a href="https://etherscan.io/tx/0xf9cd39cd71f4a4deec26496ccd941361747dc485827d9dbfe756f90f5f0e2c8e" target="_blank" class="trade_history__href">08/13 12:14</a></div>
+			                     <div role="gridcell" class="data_table__cell data_table__cell-amount"><span class="price_shift price_shift-increasing" >0.00000019</span></div> 
+			                     <div role="gridcell" class="data_table__cell data_table__cell-amount">1.00000000</div>
+			             </div>
+			             <div role="row" class="data_table__row">
+			                 <div role="gridcell" class="data_table__cell data_table__cell-date">
+			                     <a href="https://etherscan.io/tx/0xfc6974386f05a92d4903bac23a59a972157b188657e61bc8242a58046974aec6" target="_blank" class="trade_history__href">08/13 12:13</a></div>
+			                     <div role="gridcell" class="data_table__cell data_table__cell-amount"><span class="price_shift price_shift-increasing" >0.00000019</span></div> 
+			                     <div role="gridcell" class="data_table__cell data_table__cell-amount">1.00000000</div>
+			             </div>
+			             <div role="row" class="data_table__row">
+			                 <div role="gridcell" class="data_table__cell data_table__cell-date">
+			                     <a href="https://etherscan.io/tx/0x5bd4fa945d30f50e122901b8be1fcd6c9a67383886215e302477df939029634a" target="_blank" class="trade_history__href">08/13 12:11</a></div>
+			                     <div role="gridcell" class="data_table__cell data_table__cell-amount"><span class="price_shift price_shift-increasing" >0.00000019</span></div> 
+			                     <div role="gridcell" class="data_table__cell data_table__cell-amount">1.00000000</div>
+			             </div>
+			             <div role="row" class="data_table__row">
+			                 <div role="gridcell" class="data_table__cell data_table__cell-date">
+			                     <a href="https://etherscan.io/tx/0x66bbc4b184936b8bb0405baefb2f0844e016a472d50703881be2b1a12ab955c5" target="_blank" class="trade_history__href">08/13 12:10</a></div>
+			                     <div role="gridcell" class="data_table__cell data_table__cell-amount"><span class="price_shift price_shift-increasing" >0.00000018</span></div> 
+			                     <div role="gridcell" class="data_table__cell data_table__cell-amount">1.00000000</div>
+			             </div>
+			             <div role="row" class="data_table__row">
+			                 <div role="gridcell" class="data_table__cell data_table__cell-date">
+			                     <a href="https://etherscan.io/tx/0x77ee4d983cc0d06e01c279dc8c76de17597518899b4a06b1f1603a956c182cd8" target="_blank" class="trade_history__href">08/13 12:05</a></div>
+			                     <div role="gridcell" class="data_table__cell data_table__cell-amount"><span class="price_shift price_shift-increasing" >0.00000018</span></div> 
+			                     <div role="gridcell" class="data_table__cell data_table__cell-amount">1.00000000</div>
+			             </div>
+			             <div role="row" class="data_table__row">
+			                 <div role="gridcell" class="data_table__cell data_table__cell-date">
+			                     <a href="https://etherscan.io/tx/0x630a5fd12a75e4c44e83e72d02d72ddf04979601009fff6e200fd6eb572951ce" target="_blank" class="trade_history__href">08/13 12:04</a></div>
+			                     <div role="gridcell" class="data_table__cell data_table__cell-amount"><span class="price_shift price_shift-increasing" >0.00000018</span></div> 
+			                     <div role="gridcell" class="data_table__cell data_table__cell-amount">1.00000000</div>
+			             </div>
+			             <div role="row" class="data_table__row">
+			                 <div role="gridcell" class="data_table__cell data_table__cell-date">
+			                     <a href="https://etherscan.io/tx/0x82b49f729ca16b41ae0996bf1d50d58f337f5d8687a6fd36ddcc36c772056482" target="_blank" class="trade_history__href">08/13 12:03</a></div>
+			                     <div role="gridcell" class="data_table__cell data_table__cell-amount"><span class="price_shift price_shift-increasing" >0.00000018</span></div> 
+			                     <div role="gridcell" class="data_table__cell data_table__cell-amount">1.00000000</div>
+			             </div>
+			             <div role="row" class="data_table__row">
+			                 <div role="gridcell" class="data_table__cell data_table__cell-date">
+			                     <a href="https://etherscan.io/tx/0xb5eca4934eadc5f570ac26659a2f991ade6bb0bfbdd2a793ea17ecc503cad405" target="_blank" class="trade_history__href">08/12 08:12</a></div>
+			                     <div role="gridcell" class="data_table__cell data_table__cell-amount"><span class="price_shift price_shift-increasing" style='color:#ff5d5d'>1.00000000</span></div> 
+			                     <div role="gridcell" class="data_table__cell data_table__cell-amount">0.00000000</div>
+			             </div>
+			             <div role="row" class="data_table__row">
+			                 <div role="gridcell" class="data_table__cell data_table__cell-date">
+			                     <a href="https://etherscan.io/tx/0x6cc74046cd1477e8c97bdde49d3a3a1579924def4ac6470dd6e95b6e1683a830" target="_blank" class="trade_history__href">08/12 06:47</a></div>
+			                     <div role="gridcell" class="data_table__cell data_table__cell-amount"><span class="price_shift price_shift-increasing" style='color:#ff5d5d'>0.00000016</span></div> 
+			                     <div role="gridcell" class="data_table__cell data_table__cell-amount">10,000.000</div>
+			             </div>
+			             <div role="row" class="data_table__row">
+			                 <div role="gridcell" class="data_table__cell data_table__cell-date">
+			                     <a href="https://etherscan.io/tx/0x4324daa8189d39eb679d7d4e15bcd8afe16e1999c428908a50fdbf9d6fe01805" target="_blank" class="trade_history__href">08/12 06:37</a></div>
+			                     <div role="gridcell" class="data_table__cell data_table__cell-amount"><span class="price_shift price_shift-increasing" >0.00000080</span></div> 
+			                     <div role="gridcell" class="data_table__cell data_table__cell-amount">100.000000</div>
+			             </div>
+			             <div role="row" class="data_table__row">
+			                 <div role="gridcell" class="data_table__cell data_table__cell-date">
+			                     <a href="https://etherscan.io/tx/0xb891ba7d64b9641a966eaa78c98420cee431a5a2be3eaed005f1fbf77dcfd630" target="_blank" class="trade_history__href">08/12 06:35</a></div>
+			                     <div role="gridcell" class="data_table__cell data_table__cell-amount"><span class="price_shift price_shift-increasing" >0.00000080</span></div> 
+			                     <div role="gridcell" class="data_table__cell data_table__cell-amount">100.000000</div>
+			             </div>
+			             <div role="row" class="data_table__row">
+			                 <div role="gridcell" class="data_table__cell data_table__cell-date">
+			                     <a href="https://etherscan.io/tx/0xedf1b4046928a621a46a6c80c9cd5610a43c76fe06c7302361987681df6ef5cf" target="_blank" class="trade_history__href">08/12 03:35</a></div>
+			                     <div role="gridcell" class="data_table__cell data_table__cell-amount"><span class="price_shift price_shift-increasing" style='color:#ff5d5d'>0.00000080</span></div> 
+			                     <div role="gridcell" class="data_table__cell data_table__cell-amount">3,000.0000</div>
+			             </div>
+			             <div role="row" class="data_table__row">
+			                 <div role="gridcell" class="data_table__cell data_table__cell-date">
+			                     <a href="https://etherscan.io/tx/0x80c085dbb4adb15c5cc0f9e34870f5a84691aebfabcb4414753c56ccabe70ca1" target="_blank" class="trade_history__href">08/12 03:23</a></div>
+			                     <div role="gridcell" class="data_table__cell data_table__cell-amount"><span class="price_shift price_shift-increasing" style='color:#ff5d5d'>0.00000080</span></div> 
+			                     <div role="gridcell" class="data_table__cell data_table__cell-amount">3,992.9999</div>
+			             </div>
+			             <div role="row" class="data_table__row">
+			                 <div role="gridcell" class="data_table__cell data_table__cell-date">
+			                     <a href="https://etherscan.io/tx/0xc1ffd7ef48ff0d38b608b86f25c271d8bb4e0b8c6ba8cd34bebad44dad9c0a87" target="_blank" class="trade_history__href">08/12 02:59</a></div>
+			                     <div role="gridcell" class="data_table__cell data_table__cell-amount"><span class="price_shift price_shift-increasing" style='color:#ff5d5d'>0.00000080</span></div> 
+			                     <div role="gridcell" class="data_table__cell data_table__cell-amount">10,000.000</div>
+			             </div>
+			             <div role="row" class="data_table__row">
+			                 <div role="gridcell" class="data_table__cell data_table__cell-date">
+			                     <a href="https://etherscan.io/tx/0x0cca761e507e01ca2571267af325816b6eff006129244a207e5618e00981d95d" target="_blank" class="trade_history__href">08/12 02:08</a></div>
+			                     <div role="gridcell" class="data_table__cell data_table__cell-amount"><span class="price_shift price_shift-increasing" style='color:#ff5d5d'>0.00000080</span></div> 
+			                     <div role="gridcell" class="data_table__cell data_table__cell-amount">1,000.0000</div>
+			             </div>
+			             <div role="row" class="data_table__row">
+			                 <div role="gridcell" class="data_table__cell data_table__cell-date">
+			                     <a href="https://etherscan.io/tx/0x74d9c38cb02b0584586e768b00338a67821c25f653ff0dd9767aefc7a9121513" target="_blank" class="trade_history__href">08/12 01:57</a></div>
+			                     <div role="gridcell" class="data_table__cell data_table__cell-amount"><span class="price_shift price_shift-increasing" style='color:#ff5d5d'>0.00000080</span></div> 
+			                     <div role="gridcell" class="data_table__cell data_table__cell-amount">2,000.0000</div>
+			             </div>
+			             <div role="row" class="data_table__row">
+			                 <div role="gridcell" class="data_table__cell data_table__cell-date">
+			                     <a href="https://etherscan.io/tx/0xe62e3eb6c90351c0bd6385d841e7b2f2dfa1ca424adab3b08f8a3264f0bb0ca1" target="_blank" class="trade_history__href">08/12 01:31</a></div>
+			                     <div role="gridcell" class="data_table__cell data_table__cell-amount"><span class="price_shift price_shift-increasing" style='color:#ff5d5d'>0.00000080</span></div> 
+			                     <div role="gridcell" class="data_table__cell data_table__cell-amount">3,000.0000</div>
+			             </div>
+			             <div role="row" class="data_table__row">
+			                 <div role="gridcell" class="data_table__cell data_table__cell-date">
+			                     <a href="https://etherscan.io/tx/0xb589a9628814e5fcf70e588a5d7db948145019bb559be14093d87564285050e8" target="_blank" class="trade_history__href">08/12 01:28</a></div>
+			                     <div role="gridcell" class="data_table__cell data_table__cell-amount"><span class="price_shift price_shift-increasing" style='color:#ff5d5d'>0.00000090</span></div> 
+			                     <div role="gridcell" class="data_table__cell data_table__cell-amount">3,000.0000</div>
+			             </div>
+			             <div role="row" class="data_table__row">
+			                 <div role="gridcell" class="data_table__cell data_table__cell-date">
+			                     <a href="https://etherscan.io/tx/0xae8afee7d4c8fd4c11cf2968f512bec399c38e5a91e112457616e29449a93a56" target="_blank" class="trade_history__href">08/12 01:28</a></div>
+			                     <div role="gridcell" class="data_table__cell data_table__cell-amount"><span class="price_shift price_shift-increasing" style='color:#ff5d5d'>0.00000100</span></div> 
+			                     <div role="gridcell" class="data_table__cell data_table__cell-amount">3,000.0000</div>
+			             </div>
+			             <div role="row" class="data_table__row">
+			                 <div role="gridcell" class="data_table__cell data_table__cell-date">
+			                     <a href="https://etherscan.io/tx/0x7b1f69cd1664fc83798ba1b13d84b5b45fedb513ac03770677262f911bdc6791" target="_blank" class="trade_history__href">08/12 01:27</a></div>
+			                     <div role="gridcell" class="data_table__cell data_table__cell-amount"><span class="price_shift price_shift-increasing" style='color:#ff5d5d'>0.00000101</span></div> 
+			                     <div role="gridcell" class="data_table__cell data_table__cell-amount">6,920.0000</div>
+			             </div>
+			             <div role="row" class="data_table__row">
+			                 <div role="gridcell" class="data_table__cell data_table__cell-date">
+			                     <a href="https://etherscan.io/tx/0xfdbe8c04fbe9a375bd0206e157642443b37d1087df426934931c45e8a2bcebec" target="_blank" class="trade_history__href">08/12 07:41</a></div>
+			                     <div role="gridcell" class="data_table__cell data_table__cell-amount"><span class="price_shift price_shift-increasing" >0.00000080</span></div> 
+			                     <div role="gridcell" class="data_table__cell data_table__cell-amount">10,000.000</div>
+			             </div>
+			             <div role="row" class="data_table__row">
+			                 <div role="gridcell" class="data_table__cell data_table__cell-date">
+			                     <a href="https://etherscan.io/tx/0xbbb2e90797e13a7befa6171bf9f6fcf605c6c38841fb4d68ca23339756b2441b" target="_blank" class="trade_history__href">08/12 05:20</a></div>
+			                     <div role="gridcell" class="data_table__cell data_table__cell-amount"><span class="price_shift price_shift-increasing" style='color:#ff5d5d'>0.00000300</span></div> 
+			                     <div role="gridcell" class="data_table__cell data_table__cell-amount">1,000.0000</div>
+			             </div>
+			             <div role="row" class="data_table__row">
+			                 <div role="gridcell" class="data_table__cell data_table__cell-date">
+			                     <a href="https://etherscan.io/tx/0x4f5fa4f160538a96af4f6cac45306a704f58144351ad656be784f590b76439e6" target="_blank" class="trade_history__href">08/11 08:21</a></div>
+			                     <div role="gridcell" class="data_table__cell data_table__cell-amount"><span class="price_shift price_shift-increasing" style='color:#ff5d5d'>20,000.000</span></div> 
+			                     <div role="gridcell" class="data_table__cell data_table__cell-amount">0.00000010</div>
+			             </div>
+			             <div role="row" class="data_table__row">
+			                 <div role="gridcell" class="data_table__cell data_table__cell-date">
+			                     <a href="https://etherscan.io/tx/0x394afdc2da2c306a6a5d2a456381f4ac8a25978b0754d4a5f880786c17215a8a" target="_blank" class="trade_history__href">08/11 05:40</a></div>
+			                     <div role="gridcell" class="data_table__cell data_table__cell-amount"><span class="price_shift price_shift-increasing" style='color:#ff5d5d'>0.00010000</span></div> 
+			                     <div role="gridcell" class="data_table__cell data_table__cell-amount">5.00000000</div>
+			             </div>
+			             <div role="row" class="data_table__row">
+			                 <div role="gridcell" class="data_table__cell data_table__cell-date">
+			                     <a href="https://etherscan.io/tx/0x986d51563c37593dcae0c256207f0af03025f27d78cc68a5af74653e26d6cf5b" target="_blank" class="trade_history__href">08/10 09:42</a></div>
+			                     <div role="gridcell" class="data_table__cell data_table__cell-amount"><span class="price_shift price_shift-increasing" style='color:#ff5d5d'>0.00010000</span></div> 
+			                     <div role="gridcell" class="data_table__cell data_table__cell-amount">10.0000000</div>
+			             </div>
+			             <div role="row" class="data_table__row">
+			                 <div role="gridcell" class="data_table__cell data_table__cell-date">
+			                     <a href="https://etherscan.io/tx/0x9c6f5dbe4584cccab7c992afea4d6fc0d023a37010316d363f98d1efd8cfd626" target="_blank" class="trade_history__href">08/10 09:42</a></div>
+			                     <div role="gridcell" class="data_table__cell data_table__cell-amount"><span class="price_shift price_shift-increasing" style='color:#ff5d5d'>0.00020000</span></div> 
+			                     <div role="gridcell" class="data_table__cell data_table__cell-amount">5.00000000</div>
+			             </div>
+			             <div role="row" class="data_table__row">
+			                 <div role="gridcell" class="data_table__cell data_table__cell-date">
+			                     <a href="https://etherscan.io/tx/0x3b8f76d1f55ea31b8c4d8205085215899b19e0b03dc03f335cb28e84a4e329b6" target="_blank" class="trade_history__href">08/10 09:41</a></div>
+			                     <div role="gridcell" class="data_table__cell data_table__cell-amount"><span class="price_shift price_shift-increasing" style='color:#ff5d5d'>0.00030000</span></div> 
+			                     <div role="gridcell" class="data_table__cell data_table__cell-amount">2.00000000</div>
+			             </div>
+			             <div role="row" class="data_table__row">
+			                 <div role="gridcell" class="data_table__cell data_table__cell-date">
+			                     <a href="https://etherscan.io/tx/0x098ba801b5c0e13ebf85652775f72bd1df0aa20fd9e8165bc00aff9674bd107b" target="_blank" class="trade_history__href">08/10 09:00</a></div>
+			                     <div role="gridcell" class="data_table__cell data_table__cell-amount"><span class="price_shift price_shift-increasing" style='color:#ff5d5d'>0.00020000</span></div> 
+			                     <div role="gridcell" class="data_table__cell data_table__cell-amount">5.00000000</div>
+			             </div>
+			             <div role="row" class="data_table__row">
+			                 <div role="gridcell" class="data_table__cell data_table__cell-date">
+			                     <a href="https://etherscan.io/tx/0xd972864849061de277aebd32517f9ef833600173e3e3ac035f42bc93cb24d54b" target="_blank" class="trade_history__href">08/10 08:58</a></div>
+			                     <div role="gridcell" class="data_table__cell data_table__cell-amount"><span class="price_shift price_shift-increasing" style='color:#ff5d5d'>0.00030000</span></div> 
+			                     <div role="gridcell" class="data_table__cell data_table__cell-amount">3.00000000</div>
+			             </div>
+			             <div role="row" class="data_table__row">
+			                 <div role="gridcell" class="data_table__cell data_table__cell-date">
+			                     <a href="https://etherscan.io/tx/0xdd1326966bc9bd24a8acf75063c71d5856abd1d5141b5804a2913e25ead3a404" target="_blank" class="trade_history__href">08/10 08:28</a></div>
+			                     <div role="gridcell" class="data_table__cell data_table__cell-amount"><span class="price_shift price_shift-increasing" style='color:#ff5d5d'>0.00010000</span></div> 
+			                     <div role="gridcell" class="data_table__cell data_table__cell-amount">5.00000000</div>
+			             </div>
+			             <div role="row" class="data_table__row">
+			                 <div role="gridcell" class="data_table__cell data_table__cell-date">
+			                     <a href="https://etherscan.io/tx/0xf2668ac82825b3aa1ffbd7ed79c88657a64dc3358f2d8ae3686a364d276efc89" target="_blank" class="trade_history__href">08/10 08:28</a></div>
+			                     <div role="gridcell" class="data_table__cell data_table__cell-amount"><span class="price_shift price_shift-increasing" style='color:#ff5d5d'>0.00010000</span></div> 
+			                     <div role="gridcell" class="data_table__cell data_table__cell-amount">5.00000000</div>
+			             </div>
+			             <div role="row" class="data_table__row">
+			                 <div role="gridcell" class="data_table__cell data_table__cell-date">
+			                     <a href="https://etherscan.io/tx/0xbf830f9b28497260efe10d1cdaaa34371e55134e4108d5e06d55d54d49d2830b" target="_blank" class="trade_history__href">08/10 08:27</a></div>
+			                     <div role="gridcell" class="data_table__cell data_table__cell-amount"><span class="price_shift price_shift-increasing" style='color:#ff5d5d'>0.00020000</span></div> 
+			                     <div role="gridcell" class="data_table__cell data_table__cell-amount">2.00000000</div>
+			             </div>
+			             <div role="row" class="data_table__row">
+			                 <div role="gridcell" class="data_table__cell data_table__cell-date">
+			                     <a href="https://etherscan.io/tx/0xe3be3115d154e3cfe4f715a7faa9fe69fe00e6b8da7392c7c04c5bb63aa7019d" target="_blank" class="trade_history__href">08/10 08:26</a></div>
+			                     <div role="gridcell" class="data_table__cell data_table__cell-amount"><span class="price_shift price_shift-increasing" style='color:#ff5d5d'>0.00030000</span></div> 
+			                     <div role="gridcell" class="data_table__cell data_table__cell-amount">4.00000000</div>
+			             </div>
+			             <div role="row" class="data_table__row">
+			                 <div role="gridcell" class="data_table__cell data_table__cell-date">
+			                     <a href="https://etherscan.io/tx/0xdb23002cd451379e871a92e7a3ab6d89b48e38dec92ea50e4d17ee43fee6a6d7" target="_blank" class="trade_history__href">08/10 01:43</a></div>
+			                     <div role="gridcell" class="data_table__cell data_table__cell-amount"><span class="price_shift price_shift-increasing" style='color:#ff5d5d'>0.00010000</span></div> 
+			                     <div role="gridcell" class="data_table__cell data_table__cell-amount">5.00000000</div>
+			             </div>
+			             <div role="row" class="data_table__row">
+			                 <div role="gridcell" class="data_table__cell data_table__cell-date">
+			                     <a href="https://etherscan.io/tx/0x0119fa9d5411d019d7c984eee8f28eedfea24f2b6ac469d8a919b53e6fbf40a2" target="_blank" class="trade_history__href">08/10 12:59</a></div>
+			                     <div role="gridcell" class="data_table__cell data_table__cell-amount"><span class="price_shift price_shift-increasing" >0.00002400</span></div> 
+			                     <div role="gridcell" class="data_table__cell data_table__cell-amount">2,000.0000</div>
+			             </div>
+		<!----> <!---->
+		</div>
+		</div>
+		</div>
+		<!--//wallet-->
+    		<div id="myDIV1" class="my_wallet block block-highlighted none-sq-prices">
+    		    <div class="my_wallet__header"><div class="my_wallet__title"><button class="btn btn-transparent btn-icon_holder" onclick="myFunctionex()"><svg width="20" height="20" viewBox="0 0 78 78" xmlns="http://www.w3.org/2000/svg" class="icon icon-close icon-warn"><path d="M50,10.92A39.08,39.08,0,1,0,89.08,50,39.08,39.08,0,0,0,50,10.92ZM67,62.8a3,3,0,0,1-2.12,5.12,3,3,0,0,1-2.12-.87L50,54.24,37.2,67a3,3,0,0,1-2.12.88A3,3,0,0,1,33,62.8L45.76,50,33,37.2A3,3,0,1,1,37.2,33L50,45.76,62.8,33A3,3,0,0,1,67,37.2L54.24,50Z" transform="translate(-10.92 -10.92)"></path></svg></button>
+          WALLET
+        </div>
+        <div class="dropdown"> <!----></div>
+        </div>
+          <div class="row-box nav-header">
+          <ul class="nav nav-tabs three columns" role="tablist">
+            <li role="presentation" class="active">
+              <a href="#deposit1" aria-controls="deposit" role="tab" data-toggle="tab" class="trn" data-trn-key="deposit" data-original-title="" title="" aria-expanded="true">Deposit</a>
+            </li>
+            <li role="presentation" class="">
+              <a href="#withdraw1" aria-controls="withdraw" role="tab" data-toggle="tab" class="trn" data-trn-key="withdraw" data-original-title="" title="" aria-expanded="false">Withdraw</a>
+            </li>
+            <li role="presentation" class="">
+              <a href="#transfer1" aria-controls="transfer" role="tab" data-toggle="tab" class="trn" data-trn-key="transfer" data-original-title="" title="" aria-expanded="false">Transfer</a>
+            </li>
+          </ul>
+        </div>
+      <div class="row-box height4">
+              <div>
+                <div class="tab-content">
+                  <div role="tabpanel" class="tab-pane active" id="deposit1">
+                    <table class="table table-borderless table-balances">
+                      <tbody>
+                        <tr class="table-header">
+                          <td class="trn1" data-trn-key="token">Token</td>
+                          <td class="trn1" data-toggle="tooltip" data-placement="bottom" title="" data-trn-key-title="balance_wallet_tooltip" data-trn-key="balance_in_your_wallet" data-original-title="This is the balance in your personal Ethereum wallet, which you have connected to ExToke in the account dropdown (upper right).">Wallet
+                          </td>
+                          <td class="trn1" data-toggle="tooltip" data-placement="bottom" title="" data-trn-key-title="balance_etherdelta_tooltip" data-trn-key="balance_etherdelta" data-original-title="This is the balance you have deposited from your personal Ethereum wallet to the current smart contract.">ExToke
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                    <table class="table table-borderless table-balances">
+                      <tbody>
+                        <tr>
+                          <td style="width: 100px;">
+                            <a href="">XTO</a>
+                          </td>
+                          <td>
+                            <span class="contractwalletbalance">0</span>
+                          </td>
+                          <td><span class="balanceDisplayLabel">0</span>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                    <div class="padding-sides">
+                      <table class="table table-borderless table-balances">
+                        <tbody>
+                          <tr>
+                            <td colspan="2">
+                              <input type="text" class="form-control input-xs trn" placeholder="Amount" data-trn-key-placeholder="amount" id="amountoftokendeposit" data-trn-key="" style="width: 135px;background: #181818;border-color: #3d3d3d;">
+                            </td>
+                            <td>
+                              <button type="button" class="btn btn-primary btn-xs trn" data-toggle="tooltip" data-placement="bottom" title="" id="tokendeposit" data-trn-key-title="deposit_tab" data-trn-key="deposit" style="width: 135px;padding: 7px;" data-original-title="">Deposit</button>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                    <table class="table table-borderless table-balances">
+                      <tbody>
+                        <tr>
+                          <td style="width: 100px;">
+                            <a href="javascript:;">ETH</a>
+                          </td>
+                          <td>
+                            <span class="EtherbalanceDisplayLabel">0</span>
+                          </td>
+                          <td>
+                            <span class="Etherbalanceinsmartcontract">0</span>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                    <div class="padding-sides">
+                      <table class="table table-borderless table-balances">
+                        <tbody>
+                          <tr>
+                            <td colspan="2">
+                              <input type="text" class="form-control input-xs trn" placeholder="Amount" id="etherdepositvalue" data-trn-key-placeholder="amount" data-trn-key="" style="width: 135px;background: #181818;border-color: #3d3d3d;">
+                            </td>
+                            <td>
+                              <button type="button" class="btn btn-primary btn-xs trn" data-toggle="tooltip" data-placement="bottom" title="" data-trn-key-title="deposit_tab" data-trn-key="deposit" style="width: 135px;padding: 7px;" id="ethdepositbutton" data-original-title="">Deposit</button>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                  <div role="tabpanel" class="tab-pane" id="withdraw1">
+                    <table class="table table-borderless table-balances">
+                      <tbody>
+                        <tr class="table-header">
+                          <td class="trn1" data-trn-key="token">Token</td>
+                          <td class="trn1" data-toggle="tooltip" data-placement="bottom" title="" data-trn-key-title="balance_wallet_tooltip" data-trn-key="balance_in_your_wallet" data-original-title="This is the balance in your personal Ethereum wallet, which you have connected to ExToke in the account dropdown (upper right).">Wallet
+                          </td>
+                          <td class="trn1" data-toggle="tooltip" data-placement="bottom" title="" data-trn-key-title="balance_etherdelta_tooltip" data-trn-key="balance_etherdelta" data-original-title="This is the balance you have deposited from your personal Ethereum wallet to the current smart contract.">ExToke
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                    <table class="table table-borderless table-balances">
+                      <tbody>
+                        <tr>
+                          <td style="width: 100px;">
+                            <a class="selectedCurrencyLabel" href="javascript:;" style="font-size: 15px; font-weight: 100;">XTO</a>
+                          </td>
+                          <td>
+                            <span class="contractwalletbalance">0</span>
+                          </td>
+                          <td>
+                            <span class="balanceDisplayLabel">0</span>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                    <div class="padding-sides">
+                      <table class="table table-borderless table-balances">
+                        <tbody>
+                          <tr>
+                            <td colspan="2">
+                              <input type="text" class="form-control input-xs trn" placeholder="Amount" data-trn-key-placeholder="amount" id="withdrawtoken" data-trn-key="" style="width: 135px;background: #181818;border-color: #3d3d3d;">
+                            </td>
+                            <td>
+                              <button type="button" class="btn btn-primary btn-xs trn" data-toggle="tooltip" data-placement="bottom" id="withdrawtokenbutton" title="" data-trn-key-title="withdraw_tab" data-trn-key="withdraw" style="width: 135px;padding: 7px;" data-original-title="Use this to withdraw from the current smart contract (&quot;ExToke&quot; column) to your personal Ethereum wallet (&quot;Wallet&quot; column).">Withdraw</button>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                    <table class="table table-borderless table-balances">
+                      <tbody>
+                        <tr>
+                          <td style="width: 100px;">
+                            <a href="javascript:;">ETH</a>
+                          </td>
+                          <td>
+                            <span class="EtherbalanceDisplayLabel">0</span>
+                          </td>
+                          <td>
+                            <span class="Etherbalanceinsmartcontract">0</span>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                    <div class="padding-sides">
+                      <table class="table table-borderless table-balances">
+                        <tbody>
+                          <tr>
+                            <td colspan="2">
+                              <input type="text" class="form-control input-xs trn" placeholder="Amount" id="ethwithdrawamount" data-trn-key-placeholder="amount" data-trn-key="" style="width: 135px;background: #181818;border-color: #3d3d3d;">
+                            </td>
+                            <td>
+                              <button type="button" class="btn btn-primary btn-xs trn" data-toggle="tooltip" data-placement="bottom" title="" data-trn-key-title="withdraw_tab" data-trn-key="withdraw" style="width: 135px;padding: 7px;" id="ethwithdrawbutton" data-original-title="Use this to withdraw from the current smart contract (&quot; ExToke &quot; column) to your personal Ethereum wallet (&quot;Wallet&quot; column).">Withdraw</button>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                  <div role="tabpanel" class="tab-pane" id="transfer1">
+                    <table class="table table-borderless table-balances">
+                      <tbody>
+                        <tr class="table-header">
+                          <td class="trn1" data-trn-key="token">Token</td>
+                          <td class="trn1" data-toggle="tooltip" data-placement="bottom" title="" data-trn-key-title="balance_wallet_tooltip" data-trn-key="balance_in_your_wallet" data-original-title="This is the balance in your personal Ethereum wallet, which you have connected to ExToke in the account dropdown (upper right).">Wallet
+                          </td>
+                          <td class="trn1" data-toggle="tooltip" data-placement="bottom" title="" data-trn-key-title="balance_etherdelta_tooltip" data-trn-key="balance_etherdelta" data-original-title="This is the balance you have deposited from your personal Ethereum wallet to the current smart contract.">ExToke</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                    <table class="table table-borderless table-balances">
+                      <tbody>
+                        <tr>
+                          <td style="width: 100px;">
+                            <a href="javascript:;" class="selectedCurrencyLabel" style="font-size: 15px; font-weight: 100;">XTO</a>
+                          </td>
+                          <td>
+                            <span class="contractwalletbalance">0</span>
+                          </td>
+                          <td>
+                            <span class="balanceDisplayLabel">0</span>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                    <div class="padding-sides">
+                      <table class="table table-borderless table-balances">
+                        <tbody>
+                          <tr>
+                            <td>
+                              <input type="text" class="form-control input-xs trn" placeholder="Amount" data-trn-key-placeholder="amount" id="tokentransferamount" data-trn-key="" style="width: 92px;background-color: #181818;border-color: #3d3d3d;">
+                            </td>
+                            <td>
+                              <input type="text" id="tokentransferdestinationaddress" class="form-control input-xs trn" placeholder="Address" value="" data-trn-key-placeholder="address" data-trn-key="" style="width: 92px;background-color: #181818;border-color: #3d3d3d;">
+                            </td>
+                            <td>
+                              <button type="button" id="tokentransferbutton" class="btn btn-primary btn-xs trn" data-toggle="tooltip" data-placement="bottom" title="" data-trn-key-title="transfer_tab" data-trn-key="transfer" style="width: 92px;padding: 7px 0px;" data-original-title="Use this to transfer from your personal Ethereum wallet (&quot;Wallet&quot; column) to any other wallet.">Transfer</button>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                    <table class="table table-borderless table-balances">
+                      <tbody>
+                        <tr>
+                          <td style="width: 100px;">
+                            <a href="javascript:;">ETH</a>
+                          </td>
+                          <td>
+                            <span class="EtherbalanceDisplayLabel">0</span> 
+                          </td>
+                          <td>
+                            <span class="Etherbalanceinsmartcontract">0</span>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                    <div class="padding-sides">
+                      <table class="table table-borderless table-balances">
+                        <tbody>
+                          <tr>
+                            <td>
+                              <input type="text" class="form-control input-xs trn" placeholder="Amount" id="etheramount" data-trn-key-placeholder="amount" data-trn-key="" style="width: 92px;background-color: #181818;border-color: #3d3d3d;">
+                            </td>
+                            <td>
+                              <input type="text" class="form-control input-xs trn" placeholder="Address" value="" id="addresstotransfer" data-trn-key-placeholder="address" data-trn-key="" style="width: 92px;background-color: #181818;border-color: #3d3d3d;">
+                            </td>
+                            <td>
+                              <button type="button" class="btn btn-primary btn-xs trn" data-toggle="tooltip" data-placement="bottom" title="" data-trn-key-title="transfer_tab" data-trn-key="transfer" style="width: 92px;padding: 7px 0px;" id="ethtransfer" data-original-title="Use this to transfer from your personal Ethereum wallet (&quot;Wallet&quot; column) to any other wallet.">Transfer</button>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+<!--                 <div style="margin: 12px;">
+                  <p>Make sure <a href="javascript:;" class="selectedCurrencyLabel"></a> is the token you actually want to trade. Multiple tokens can share the same name.
+                  </p>
+                </div> -->
+              </div>
+            </div>
+      <button class="btn btn-transparent my_wallet__collapse" onclick="myFunctionex()"><svg width="8px" height="7px" xmlns="http://www.w3.org/2000/svg" class="icon icon-caret-up icon-warn"><path d="M0.499,6.077 L7.250,6.249 L4.021,0.248 L0.499,6.077 Z"></path></svg></button>
+		</div>    
+			<!--//wallet-->
+	</div>
+	<div class="container container-wide border" style="margin-left: 8px;margin-right: 8px; padding-left: 0; padding-right: 0;margin-left: 8px;">
+    <div id='tabs' class="tabs block block-light block-strip_overflow border" style="border-radius: 5px!important;">
+      <ul role="tablist" class="tabs__list border">
+          <li role="tab" class="tabs__list_item tabs__list_item-active border" aria-selected="true">
+            <a href='#tab1' style="color: #ead86a!important; padding: 5px 40px;font-size: 18px;">ORDER</a></li>
+          <li role="tab" class="tabs__list_item tabs__list_item-active border" aria-selected="true">
+            <a href='#tab2' style="color: #ead86a!important; padding: 5px 40px;font-size: 18px;">TRADE HISTORY</a>
+          </li>
+      </ul>
+    <div id='tab1' style="padding: 0;">
+    <section id="order" class="tabs__tab_content">
+      <div class="my_orders">
+        <div role="grid" aria-readonly="true" class="data_table data_table-inverted"> 
+          <div class="data_table__head">
+            <div role="row" class="data_table__row">
+              <div role="gridcell" class="data_table__cell data_table__cell-date">Date</div> 
+              <div role="gridcell" class="data_table__cell">Token</div> 
+              <div role="gridcell" class="data_table__cell data_table__cell-order_type">Type</div> 
+              <div role="gridcell" class="data_table__cell data_table__cell-amount">Price (in ETH)</div> 
+              <div role="gridcell" class="data_table__cell data_table__cell-amount">Total Tokens</div>
+            </div>
+          </div> 
+          <div class="data_table__body" style="color: wheat; font-size: 14px;"> 
+                    <div role="row" class="data_table__row data_table__row-no_data">
+                      <div role="gridcell" class="data_table__cell" style="color: #fff;">
+                        There is no data yet
+                      </div>
+                    </div>
+                              </div>
+        </div>
+      </div>
+    </section> 
+  </div>
+      <div id='tab2' style="padding: 0;">
+        <section id="order" class="tabs__tab_content">
+          <div class="my_trade_history"><div role="grid" aria-readonly="true" class="data_table data_table-inverted"> 
+          <div class="data_table__head">
+              <div role="row" class="data_table__row">
+                  <div role="gridcell" class="data_table__cell data_table__cell-date">Date</div> 
+                  <div role="gridcell" class="data_table__cell">Token</div> 
+                  <div role="gridcell" class="data_table__cell data_table__cell-order_type">Type</div> 
+                  <div role="gridcell" class="data_table__cell data_table__cell-amount">Price</div> 
+                  <div role="gridcell" class="data_table__cell data_table__cell-amount">Fee</div> 
+                  <div role="gridcell" class="data_table__cell data_table__cell-amount">Total Tokens</div>
+                </div>
+            </div> 
+            <div class="data_table__body" style="color: wheat; font-size: 14px;"> 
+                    <div role="row" class="data_table__row data_table__row-no_data">
+                      <div role="gridcell" class="data_table__cell" style="color: #fff;">
+                        There is no data yet
+                      </div>
+                    </div>
+            </div>
+</div>
+</div>
+        </section> 
+      </div>
+  </div>
+</div>
+		<div class="container container-semi_wide" style="margin-right: 8px; padding-left: 0; padding-right: 0;margin-left: 8px;"><!----> 
+       <div id='tabs2' class="order_form tabs block block-light block-strip_overflow border" style="border-radius: 5px!important;">
+      <ul role="tablist" class="tabs__list border">
+          <li role="tab" class="tabs__list_item tabs__list_item-active border" aria-selected="true">
+            <a href='#tab1' style="color: #ead86a!important;padding: 5px 80px;font-size: 18px;">BUY XTO</a></li>
+          <li role="tab" class="tabs__list_item tabs__list_item-active border" aria-selected="true">
+            <a href='#tab2' style="color: #ead86a!important;padding: 5px 79px;font-size: 18px;">SELL XTO</a>
+          </li>
+      </ul>
+<div id='tab1' style="padding: 0;">
+<form class="form" style="margin: 0 18%;" onsubmit="return false;">
+    <input type="hidden" id="byExpiryInBlock" value="10000">
+      <div class="order_form__wallet_balance" style="color: #2a986f;">
+      <img src="images/purse _2_.png" alt="parse"> 
+      <span class="currency_amount" style="margin-left: 8px;color: lightgreen;">
+                <span class="Etherbalanceinsmartcontract">0.00</span> ETH
+            </span> <!----></div> 
+    <div class="form__input_group"><label for="price" class="form__input_label" style="color: #fff;">Price</label> 
+    <div class="form__input"><!----> <span class="form__input_addon form__input_addon-append">ETH</span> 
+    <input type="text" class="buyAmountPerEtherClass" id="buyAmountPerEther" autocomplete="off"></div>
+    </div> 
+    <div class="form__input_group"><label for="amount" class="form__input_label" style="color: #fff;">Amount</label> <div class="form__input"><!----> <span class="form__input_addon form__input_addon-append">
+                XTO   
+    </span></span> <input type="text" class="buyAmountPerEtherClass" id="buyTokenAmount" autocomplete="off"></div>
+    </div>
+    <div class="cols cols-2"><div class="cols__col"><div class="order_form__total_row"><span class="order_form__total_label" style="color: #fff;">Fee</span> <span class="currency_amount" style="color: #fff;">0.00 XTO</span></div> <div class="order_form__total_row"><span class="order_form__total_label" style="color: #fff;">Total</span> <span class="currency_amount" style="color: #fff;"><span id="buyETHAmount">0.00</span> ETH</span></div></div> 
+    <div class="cols__col">
+    <button id="buyPutTradeButton"  class="btn order_form__btn_submit" style="background-color: #449235;"> Buy  <img src="assets/img/spinner.gif" class="spinner" style="display: none;"></button></div>
+    </div>
+</form>
+</div>
+  <div id='tab2' style="padding: 0;">
+       <form class="form" style="margin: 0 18%;" onsubmit="return false;">
+        <input type="hidden" id="sellbyExpiryInBlock" value="10000">
+        <div class="order_form__wallet_balance" style="color: #ff5d5d;">
+        <img src="images/purse _2_.png" alt="wallet"> 
+        <!----> <span class="currency_amount" style="color: #ff5d5d;">
+                <span class="balanceDisplayLabel">0.00</span> XTO            </span></div> <div class="form__input_group"><label for="price" class="form__input_label" style="color: #fff;">Price</label> <div class="form__input"><!----> <span class="form__input_addon form__input_addon-append">ETH</span> 
+            <input type="text" class="sellAmountPerEtherClass" id="sellAmountPerEther" autocomplete="off">
+            </div></div> <div class="form__input_group"><label for="amount" class="form__input_label" style="color: #fff;">Amount</label> <div class="form__input"><!----> <span class="form__input_addon form__input_addon-append">
+                XTO            </span></span> 
+            <input type="text" class="sellAmountPerEtherClass" id="sellTokenAmount" autocomplete="off"></div></div>
+                <div class="cols cols-2"><div class="cols__col"><div class="order_form__total_row"><span class="order_form__total_label" style="color: #fff;">Fee</span> <span class="currency_amount"style="color: #fff;">0.00 XTO</span></div> <div class="order_form__total_row"><span class="order_form__total_label" style="color: #fff;">Total</span> <span class="currency_amount" style="color: #fff;"><span id="sellETHAmount">0.00</span> ETH</span></div></div> <div class="cols__col"><button id="sellPutTradeButton"  class="btn order_form__btn_submit" style="background-color: #ff5620;">
+                    Sell
+                  <img src="assets/img/spinner.gif" class="spinner" style="display: none; "></button></div></div></form>
+  </div>
+  </div>
+      </div>	
+	</main>
+    <a class="btn-transparent switcher switcher-chat" href="https://t.me/extoke" target="_blank">
+    <img src="images/livechat.png" alt="livechat" style="width: 150px;">
+</a>
+    <script src="ajax.googleapis.com/ajax/libs/jquery/3.3.1/www_subdomain/jquery.min.js"></script>
+    <script src="cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/www_subdomain/jquery-ui.min.js"></script>
+    <script src="maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/www_subdomain/bootstrap.min.js"></script>
+    <script src="js/alertify.min.js" type="text/javascript"></script>
+     <script src="cdn.jsdelivr.net/npm/es6-promise_4/dist/www_subdomain/es6-promise.js"></script>
+	<script src="cdn.jsdelivr.net/npm/es6-promise_4/dist/www_subdomain/es6-promise.auto.js"></script> 
+    <script src="cdn.jsdelivr.net/gh/ethereum/web3.js_1.0.0-beta.34/dist/www_subdomain/web3.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function(){
+          $('#tabs').tabs();
+          $('#tabs').bind('tabsselect',function(e, ui) {
+              console.log(ui);
+          });
+      });
+      $(document).ready(function() {
+        // Tab initialization
+        $('#tabs2').tabs({
+            select: function(event, ui){
+                var tabNumber = ui.index;
+                var tabName = $(ui.tab).text();
+                console.log('Tab number ' + tabNumber + ' - ' + tabName + ' - clicked');
+            }
+        });
+    });
+    </script>
+    <script>
+       function myFunctionsh() {
+          var x = document.getElementById('myDIV');
+          x.style.display = 'none';
+          var y = document.getElementById('tv_chart_container');
+           y.style.display = 'block';
+      }
+    </script>
+     <script>
+       function myFunctionex() {
+          var x = document.getElementById('myDIV1');
+          x.style.display = 'none';
+          var y = document.getElementById('myDIV2');
+           y.style.display = 'block';
+      }
+    </script>
+    <script type="text/javascript">
+      $('.none-sq-price').hide();
+        $('.change-price').on('click',
+          function() {
+            $('.sq-price, .none-sq-price').toggle(200);
+          }
+        );
+    </script>
+    <script type="text/javascript">
+      $('.none-sq-prices').hide();
+        $('.change-prices').on('click',
+          function() {
+            $('.sq-prices, .none-sq-prices').toggle(200);
+          }
+        );
+    </script>
+    <script> 
+        $(document).ready(function(){
+            $("#flip").click(function(){
+                $("#panel").slideToggle("slow");
+            });
+        });
+    </script>
+    <script> 
+			$(document).ready(function(){
+				$("#search_keywords").on('keyup', function(){
+					var search = $(this).val(); console.log(search);
+					$.post("php/ajax_api.php?dropdown_search="+search, function(data, status){$('#data_table__body').html(data);});
+				});
+				});
+		</script>
+<script>
+var web3Infura = new Web3(Web3.givenProvider || "https://mainnet.infura.io/R4ZOS5AoF9gJMfGMuqJm");
+var ethProvider = "https://mainnet.infura.io/R4ZOS5AoF9gJMfGMuqJm";
+//to find selected currency in menu 
+var defaultCurrencyMenu = "XTO";
+var mainContractAddress = "0x97c9e0eccc27efef7330e89a8c9414623ba2ee0f";
+var userEtherBalance=0; //in this variable we store ether balance of user wallet
+var userEtherBalanceInWei=0; //in this variable we store ether balance of user wallet in wei
+var userTokenBalance=0; //in this variable we store the balance of token in user wallet address
+var userEtherBalanceOfSmartcontract=0; //in this variable we store the ether balance of user which are in smart contract
+var userTokenbalanceOfSmartcontract=0; //in this variable we store the particular token balance of user from smart contaract
+var feeTakeInContract=0;
+var EtherAddress = "0x0000000000000000000000000000000000000000";
+var etherscanTxURL = "https://etherscan.io/tx/";
+var CurrentBlockNumber=0;
+var myAccountAddress="";
+var gasApprove = "250000";
+var gasDeposit = "250000";
+var gasWithdraw = "250000";
+var gasTrade = "250000";
+var ethAddr = "0x0000000000000000000000000000000000000000";
+var ethGasPrice = "60000000000";
+var domainname = window.location.hostname;
+var selectedCurrencyMenu = "XTO";
+var selectedCurrencyContract = "0x28925299ee1edd8fd68316eaa64b651456694f0f";
+var selectedTokenDecimal = "18";
+var arrayABI = [
+	{
+		"anonymous": false,
+		"inputs": [
+			{
+				"indexed": true,
+				"name": "previousOwner",
+				"type": "address"
+			},
+			{
+				"indexed": true,
+				"name": "newOwner",
+				"type": "address"
+			}
+		],
+		"name": "OwnershipTransferred",
+		"type": "event"
+	},
+	{
+		"constant": false,
+		"inputs": [
+			{
+				"name": "tokenGet",
+				"type": "address"
+			},
+			{
+				"name": "amountGet",
+				"type": "uint256"
+			},
+			{
+				"name": "tokenGive",
+				"type": "address"
+			},
+			{
+				"name": "amountGive",
+				"type": "uint256"
+			},
+			{
+				"name": "expires",
+				"type": "uint256"
+			},
+			{
+				"name": "nonce",
+				"type": "uint256"
+			},
+			{
+				"name": "v",
+				"type": "uint8"
+			},
+			{
+				"name": "r",
+				"type": "bytes32"
+			},
+			{
+				"name": "s",
+				"type": "bytes32"
+			}
+		],
+		"name": "cancelOrder",
+		"outputs": [],
+		"payable": false,
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"constant": false,
+		"inputs": [
+			{
+				"name": "accountLevelsAddr_",
+				"type": "address"
+			}
+		],
+		"name": "changeAccountLevelsAddr",
+		"outputs": [],
+		"payable": false,
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"constant": false,
+		"inputs": [
+			{
+				"name": "admin_",
+				"type": "address"
+			}
+		],
+		"name": "changeAdmin",
+		"outputs": [],
+		"payable": false,
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"anonymous": false,
+		"inputs": [
+			{
+				"indexed": false,
+				"name": "token",
+				"type": "address"
+			},
+			{
+				"indexed": false,
+				"name": "user",
+				"type": "address"
+			},
+			{
+				"indexed": false,
+				"name": "amount",
+				"type": "uint256"
+			},
+			{
+				"indexed": false,
+				"name": "balance",
+				"type": "uint256"
+			}
+		],
+		"name": "Deposit",
+		"type": "event"
+	},
+	{
+		"anonymous": false,
+		"inputs": [
+			{
+				"indexed": false,
+				"name": "tokenGet",
+				"type": "address"
+			},
+			{
+				"indexed": false,
+				"name": "amountGet",
+				"type": "uint256"
+			},
+			{
+				"indexed": false,
+				"name": "tokenGive",
+				"type": "address"
+			},
+			{
+				"indexed": false,
+				"name": "amountGive",
+				"type": "uint256"
+			},
+			{
+				"indexed": false,
+				"name": "get",
+				"type": "address"
+			},
+			{
+				"indexed": false,
+				"name": "give",
+				"type": "address"
+			}
+		],
+		"name": "Trade",
+		"type": "event"
+	},
+	{
+		"anonymous": false,
+		"inputs": [
+			{
+				"indexed": false,
+				"name": "tokenGet",
+				"type": "address"
+			},
+			{
+				"indexed": false,
+				"name": "amountGet",
+				"type": "uint256"
+			},
+			{
+				"indexed": false,
+				"name": "tokenGive",
+				"type": "address"
+			},
+			{
+				"indexed": false,
+				"name": "amountGive",
+				"type": "uint256"
+			},
+			{
+				"indexed": false,
+				"name": "expires",
+				"type": "uint256"
+			},
+			{
+				"indexed": false,
+				"name": "nonce",
+				"type": "uint256"
+			},
+			{
+				"indexed": false,
+				"name": "user",
+				"type": "address"
+			},
+			{
+				"indexed": false,
+				"name": "v",
+				"type": "uint8"
+			},
+			{
+				"indexed": false,
+				"name": "r",
+				"type": "bytes32"
+			},
+			{
+				"indexed": false,
+				"name": "s",
+				"type": "bytes32"
+			}
+		],
+		"name": "Cancel",
+		"type": "event"
+	},
+	{
+		"anonymous": false,
+		"inputs": [
+			{
+				"indexed": false,
+				"name": "tokenGet",
+				"type": "address"
+			},
+			{
+				"indexed": false,
+				"name": "amountGet",
+				"type": "uint256"
+			},
+			{
+				"indexed": false,
+				"name": "tokenGive",
+				"type": "address"
+			},
+			{
+				"indexed": false,
+				"name": "amountGive",
+				"type": "uint256"
+			},
+			{
+				"indexed": false,
+				"name": "expires",
+				"type": "uint256"
+			},
+			{
+				"indexed": false,
+				"name": "nonce",
+				"type": "uint256"
+			},
+			{
+				"indexed": false,
+				"name": "user",
+				"type": "address"
+			}
+		],
+		"name": "Order",
+		"type": "event"
+	},
+	{
+		"anonymous": false,
+		"inputs": [
+			{
+				"indexed": false,
+				"name": "token",
+				"type": "address"
+			},
+			{
+				"indexed": false,
+				"name": "user",
+				"type": "address"
+			},
+			{
+				"indexed": false,
+				"name": "amount",
+				"type": "uint256"
+			},
+			{
+				"indexed": false,
+				"name": "balance",
+				"type": "uint256"
+			}
+		],
+		"name": "Withdraw",
+		"type": "event"
+	},
+	{
+		"constant": false,
+		"inputs": [
+			{
+				"name": "feeAccount_",
+				"type": "address"
+			}
+		],
+		"name": "changeFeeAccount",
+		"outputs": [],
+		"payable": false,
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"constant": false,
+		"inputs": [
+			{
+				"name": "feeMake_",
+				"type": "uint256"
+			}
+		],
+		"name": "changeFeeMake",
+		"outputs": [],
+		"payable": false,
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"constant": false,
+		"inputs": [
+			{
+				"name": "feeRebate_",
+				"type": "uint256"
+			}
+		],
+		"name": "changeFeeRebate",
+		"outputs": [],
+		"payable": false,
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"constant": false,
+		"inputs": [
+			{
+				"name": "feeTake_",
+				"type": "uint256"
+			}
+		],
+		"name": "changeFeeTake",
+		"outputs": [],
+		"payable": false,
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"constant": false,
+		"inputs": [],
+		"name": "deposit",
+		"outputs": [],
+		"payable": true,
+		"stateMutability": "payable",
+		"type": "function"
+	},
+	{
+		"constant": false,
+		"inputs": [
+			{
+				"name": "token",
+				"type": "address"
+			},
+			{
+				"name": "amount",
+				"type": "uint256"
+			}
+		],
+		"name": "depositToken",
+		"outputs": [],
+		"payable": false,
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"constant": false,
+		"inputs": [
+			{
+				"name": "tokenGet",
+				"type": "address"
+			},
+			{
+				"name": "amountGet",
+				"type": "uint256"
+			},
+			{
+				"name": "tokenGive",
+				"type": "address"
+			},
+			{
+				"name": "amountGive",
+				"type": "uint256"
+			},
+			{
+				"name": "expires",
+				"type": "uint256"
+			},
+			{
+				"name": "nonce",
+				"type": "uint256"
+			}
+		],
+		"name": "order",
+		"outputs": [],
+		"payable": false,
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"constant": false,
+		"inputs": [
+			{
+				"name": "tokenGet",
+				"type": "address"
+			},
+			{
+				"name": "amountGet",
+				"type": "uint256"
+			},
+			{
+				"name": "tokenGive",
+				"type": "address"
+			},
+			{
+				"name": "amountGive",
+				"type": "uint256"
+			},
+			{
+				"name": "expires",
+				"type": "uint256"
+			},
+			{
+				"name": "nonce",
+				"type": "uint256"
+			},
+			{
+				"name": "user",
+				"type": "address"
+			},
+			{
+				"name": "v",
+				"type": "uint8"
+			},
+			{
+				"name": "r",
+				"type": "bytes32"
+			},
+			{
+				"name": "s",
+				"type": "bytes32"
+			},
+			{
+				"name": "amount",
+				"type": "uint256"
+			}
+		],
+		"name": "trade",
+		"outputs": [],
+		"payable": false,
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"constant": false,
+		"inputs": [
+			{
+				"name": "newOwner",
+				"type": "address"
+			}
+		],
+		"name": "transferOwnership",
+		"outputs": [],
+		"payable": false,
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"constant": false,
+		"inputs": [
+			{
+				"name": "amount",
+				"type": "uint256"
+			}
+		],
+		"name": "withdraw",
+		"outputs": [],
+		"payable": false,
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"constant": false,
+		"inputs": [
+			{
+				"name": "token",
+				"type": "address"
+			},
+			{
+				"name": "amount",
+				"type": "uint256"
+			}
+		],
+		"name": "withdrawToken",
+		"outputs": [],
+		"payable": false,
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"name": "admin_",
+				"type": "address"
+			},
+			{
+				"name": "feeAccount_",
+				"type": "address"
+			},
+			{
+				"name": "accountLevelsAddr_",
+				"type": "address"
+			},
+			{
+				"name": "feeMake_",
+				"type": "uint256"
+			},
+			{
+				"name": "feeTake_",
+				"type": "uint256"
+			},
+			{
+				"name": "feeRebate_",
+				"type": "uint256"
+			}
+		],
+		"payable": false,
+		"stateMutability": "nonpayable",
+		"type": "constructor"
+	},
+	{
+		"payable": false,
+		"stateMutability": "nonpayable",
+		"type": "fallback"
+	},
+	{
+		"constant": true,
+		"inputs": [],
+		"name": "accountLevelsAddr",
+		"outputs": [
+			{
+				"name": "",
+				"type": "address"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [],
+		"name": "admin",
+		"outputs": [
+			{
+				"name": "",
+				"type": "address"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [
+			{
+				"name": "tokenGet",
+				"type": "address"
+			},
+			{
+				"name": "amountGet",
+				"type": "uint256"
+			},
+			{
+				"name": "tokenGive",
+				"type": "address"
+			},
+			{
+				"name": "amountGive",
+				"type": "uint256"
+			},
+			{
+				"name": "expires",
+				"type": "uint256"
+			},
+			{
+				"name": "nonce",
+				"type": "uint256"
+			},
+			{
+				"name": "user",
+				"type": "address"
+			}
+		],
+		"name": "amountFilled",
+		"outputs": [
+			{
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [
+			{
+				"name": "tokenGet",
+				"type": "address"
+			},
+			{
+				"name": "amountGet",
+				"type": "uint256"
+			},
+			{
+				"name": "tokenGive",
+				"type": "address"
+			},
+			{
+				"name": "amountGive",
+				"type": "uint256"
+			},
+			{
+				"name": "expires",
+				"type": "uint256"
+			},
+			{
+				"name": "nonce",
+				"type": "uint256"
+			},
+			{
+				"name": "user",
+				"type": "address"
+			},
+			{
+				"name": "v",
+				"type": "uint8"
+			},
+			{
+				"name": "r",
+				"type": "bytes32"
+			},
+			{
+				"name": "s",
+				"type": "bytes32"
+			}
+		],
+		"name": "availableVolume",
+		"outputs": [
+			{
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [
+			{
+				"name": "token",
+				"type": "address"
+			},
+			{
+				"name": "user",
+				"type": "address"
+			}
+		],
+		"name": "balanceOf",
+		"outputs": [
+			{
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [],
+		"name": "feeAccount",
+		"outputs": [
+			{
+				"name": "",
+				"type": "address"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [],
+		"name": "feeMake",
+		"outputs": [
+			{
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [],
+		"name": "feeRebate",
+		"outputs": [
+			{
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [],
+		"name": "feeTake",
+		"outputs": [
+			{
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [
+			{
+				"name": "",
+				"type": "address"
+			},
+			{
+				"name": "",
+				"type": "bytes32"
+			}
+		],
+		"name": "orderFills",
+		"outputs": [
+			{
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [
+			{
+				"name": "",
+				"type": "address"
+			},
+			{
+				"name": "",
+				"type": "bytes32"
+			}
+		],
+		"name": "orders",
+		"outputs": [
+			{
+				"name": "",
+				"type": "bool"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [],
+		"name": "owner",
+		"outputs": [
+			{
+				"name": "",
+				"type": "address"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [
+			{
+				"name": "tokenGet",
+				"type": "address"
+			},
+			{
+				"name": "amountGet",
+				"type": "uint256"
+			},
+			{
+				"name": "tokenGive",
+				"type": "address"
+			},
+			{
+				"name": "amountGive",
+				"type": "uint256"
+			},
+			{
+				"name": "expires",
+				"type": "uint256"
+			},
+			{
+				"name": "nonce",
+				"type": "uint256"
+			},
+			{
+				"name": "user",
+				"type": "address"
+			},
+			{
+				"name": "v",
+				"type": "uint8"
+			},
+			{
+				"name": "r",
+				"type": "bytes32"
+			},
+			{
+				"name": "s",
+				"type": "bytes32"
+			},
+			{
+				"name": "amount",
+				"type": "uint256"
+			},
+			{
+				"name": "sender",
+				"type": "address"
+			}
+		],
+		"name": "testTrade",
+		"outputs": [
+			{
+				"name": "",
+				"type": "bool"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [],
+		"name": "tokenReward",
+		"outputs": [
+			{
+				"name": "",
+				"type": "address"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [
+			{
+				"name": "",
+				"type": "address"
+			},
+			{
+				"name": "",
+				"type": "address"
+			}
+		],
+		"name": "tokens",
+		"outputs": [
+			{
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	}
+];
+var contractabi = Array;
+var isTestNetNo = "No";
+var minimumEthRequired = "60000000000";
+</script>
+<script src="js/test.js" type="text/javascript"></script>
+	</body>
+</html>
